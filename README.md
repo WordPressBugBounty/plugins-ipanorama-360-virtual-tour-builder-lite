@@ -1,0 +1,1 @@
+# plugins-ipanorama-360-virtual-tour-builder-lite
