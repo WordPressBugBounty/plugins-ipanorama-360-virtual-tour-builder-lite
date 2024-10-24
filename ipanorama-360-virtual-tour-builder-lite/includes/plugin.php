@@ -417,11 +417,11 @@ class iPanorama_App {
 	 */
 	function shortcode($atts) {
         $keys_valid = ['id', 'slug', 'class', 'sceneid', 'width', 'height', 'customdata'];
-        $atts_valid   = array_filter($atts, function($key) use ($keys_valid) {
+        $atts_valid = array_filter($atts, function($key) use ($keys_valid) {
             return in_array($key, $keys_valid);
         }, ARRAY_FILTER_USE_KEY);
 		extract(shortcode_atts(['id'=>0, 'slug'=>NULL, 'class'=>NULL, 'sceneid'=>NULL, 'width'=>NULL,'height'=>NULL, 'customdata'=>NULL], $atts_valid));
-		
+
 		if(!$id && !$slug) {
 			return '<p>' . esc_html__('Error: invalid ipanorama identifier attribute', 'ipanorama') . '</p>';
 		}
@@ -687,7 +687,17 @@ class iPanorama_App {
 		add_submenu_page('ipanorama', esc_html__('iPanorama 360', 'ipanorama'), esc_html__('All Items', 'ipanorama'), 'read', 'ipanorama', array( $this, 'admin_menu_page_items' ));
 		add_submenu_page('ipanorama', esc_html__('iPanorama 360', 'ipanorama'), esc_html__('Add New', 'ipanorama'), 'read', 'ipanorama' . '_item', array( $this, 'admin_menu_page_item' ));
 		add_submenu_page('ipanorama', esc_html__('iPanorama 360', 'ipanorama'), esc_html__('Settings', 'ipanorama'), 'manage_options', 'ipanorama' . '_settings', array( $this, 'admin_menu_page_settings' ));
+        
+        add_submenu_page('ipanorama', esc_html__('iPanorama 360', 'ipanorama'), esc_html__('Upgrade to Pro', 'ipanorama'), 'manage_options', 'ipanorama_upgrade_to_pro', [$this, 'admin_menu_page_upgrade_to_pro']);
+        
 	}
+
+    function admin_menu_page_upgrade_to_pro() {
+        $page = sanitize_key(filter_input(INPUT_GET, 'page', FILTER_DEFAULT));
+        if($page==='ipanorama_upgrade_to_pro') {
+            echo '<script>window.location = "https://1.envato.market/getipanorama360"</script>';
+        }
+    }
 
     function admin_footer() {
         if(get_current_screen() && get_current_screen()->base !== 'plugins') {
@@ -1039,13 +1049,13 @@ class iPanorama_App {
 			$type = filter_input(INPUT_POST, 'type', FILTER_UNSAFE_RAW);
 			$flag = true;
 			
-			if(IPANORAMA_PLUGIN_PLAN == 'lite') {
+			if(IPANORAMA_PLUGIN_PLAN == 'lite' && !$inputId) {
 				$rowcount = $wpdb->get_var("SELECT COUNT(*) FROM  {$table}");
-				
+
 				if(!($rowcount == 0 || ($rowcount == 1 && $inputId))) {
 					$flag = false;
 					$error = true;
-					$data['msg'] = esc_html__('The operation failed, you can work only with one item. To create more, buy the pro version.', 'ipanorama');
+					$data['msg'] = esc_html__('The operation failed, you can create only one item. To create more, buy the pro version.', 'ipanorama');
 				}
 			}
 			

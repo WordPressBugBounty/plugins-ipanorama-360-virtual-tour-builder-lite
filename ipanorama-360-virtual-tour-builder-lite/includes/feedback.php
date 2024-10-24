@@ -35,7 +35,7 @@ $reasons = [
             <div class="ipanorama-fields">
             <?php foreach($reasons as $key => $value) { ?>
                 <div class="ipanorama-field">
-                    <label><input type="radio" name="ipanorama-reason" value="<?php echo esc_attr($key); ?>"><?php echo esc_attr($value["label"]); ?></label>
+                    <label><input type="radio" name="ipanorama-reason" <?php if ( $key === "temporary" ) echo 'checked'; ?> value="<?php echo esc_attr($key); ?>"><?php echo esc_attr($value["label"]); ?></label>
                     <?php if(isset($value["input"])) { ?>
                         <input type="text" name="reason-<?php echo esc_attr($key); ?>" placeholder="<?php echo esc_attr($value["input"]); ?>">
                     <?php } ?>
@@ -47,8 +47,8 @@ $reasons = [
             </div>
         </div>
         <div class="ipanorama-footer">
-            <div class="ipanorama-btn ipanorama-skip"><?php esc_html_e("Skip & Deactivate", 'ipanorama'); ?></div>
             <div class="ipanorama-btn ipanorama-submit"><?php esc_html_e("Submit & Deactivate", 'ipanorama'); ?></div>
+            <div class="ipanorama-btn ipanorama-skip"><?php esc_html_e("Skip & Deactivate", 'ipanorama'); ?></div>
         </div>
     </div>
 </div>

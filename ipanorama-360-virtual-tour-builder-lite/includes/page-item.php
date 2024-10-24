@@ -12,11 +12,22 @@ $modified = mysql2date(get_option('date_format'), $item->modified) . ' at ' . my
 	<?php require 'page-info.php'; ?>
 	<input id="ipanorama-load-config-from-file" type="file" style="display:none;" />
 	<div class="ipanorama-page-header">
-		<div class="ipanorama-title"><i class="xfa fa-cubes"></i><?php esc_html_e('iPanorama 360 Item', 'ipanorama'); ?></div>
-		<div class="ipanorama-actions">
-			<a class="ipanorama-blue" href="?page=ipanorama_item" title="<?php esc_html_e('Create a new item', 'ipanorama'); ?>"><?php esc_html_e('Add Item', 'ipanorama'); ?></a>
-			<a class="ipanorama-indigo" href="#" al-on.click="appData.fn.saveConfigToFile(appData)" title="<?php esc_html_e('Save config to a JSON file', 'ipanorama'); ?>"><?php esc_html_e('Save As...', 'ipanorama'); ?></a>
-			<a class="ipanorama-green" href="#" al-on.click="appData.fn.loadConfigFromFile(appData)" title="<?php esc_html_e('Load config from a JSON file', 'ipanorama'); ?>"><?php esc_html_e('Load As...', 'ipanorama'); ?></a>
+		<div class="ipanorama-title">
+            <i class="xfa fa-cubes"></i>
+            <span>iPanorama 360<sup><?php echo esc_attr(IPANORAMA_PLUGIN_PLAN); ?></sup></span>
+            <span> - </span>
+            <?php esc_html_e('Item', 'ipanorama'); ?>
+        </div>
+		<div class="ipanorama-actions-menu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <div class="ipanorama-actions-menu-items">
+			    <a href="#" al-on.click="appData.fn.saveConfigToFile(appData)" title="<?php esc_html_e('Save config to a JSON file', 'ipanorama'); ?>"><?php esc_html_e('Save As...', 'ipanorama'); ?></a>
+			    <a href="#" al-on.click="appData.fn.loadConfigFromFile(appData)" title="<?php esc_html_e('Load config from a JSON file', 'ipanorama'); ?>"><?php esc_html_e('Load As...', 'ipanorama'); ?></a>
+            </div>
 		</div>
 	</div>
 	<div class="ipanorama-messages" id="ipanorama-messages">

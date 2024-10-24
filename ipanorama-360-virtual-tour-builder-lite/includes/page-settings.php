@@ -7,7 +7,12 @@ $page = sanitize_key(filter_input(INPUT_GET, 'page', FILTER_DEFAULT));
 <div class="ipanorama-root" id="ipanorama-app-settings" style="display:none;">
 	<?php require 'page-info.php'; ?>
 	<div class="ipanorama-page-header">
-		<div class="ipanorama-title"><i class="xfa fa-cubes"></i><?php esc_html_e('iPanorama 360 Settings', 'ipanorama'); ?></div>
+		<div class="ipanorama-title">
+            <i class="xfa fa-cubes"></i>
+            <span>iPanorama 360<sup><?php echo esc_attr(IPANORAMA_PLUGIN_PLAN); ?></sup></span>
+            <span> - </span>
+            <?php esc_html_e('Settings', 'ipanorama'); ?>
+        </div>
 	</div>
 	<div class="ipanorama-messages" id="ipanorama-messages">
 	</div>

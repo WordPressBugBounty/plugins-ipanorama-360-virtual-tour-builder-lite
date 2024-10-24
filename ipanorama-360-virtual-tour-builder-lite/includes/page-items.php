@@ -9,7 +9,12 @@ $list_table->prepare_items();
 	<?php require 'page-info.php'; ?>
 	<?php require 'page-feedback.php'; ?>
 	<div class="ipanorama-page-header">
-		<div class="ipanorama-title"><i class="xfa fa-cubes"></i><?php esc_html_e('iPanorama 360 Items', 'ipanorama'); ?></div>
+		<div class="ipanorama-title">
+            <i class="xfa fa-cubes"></i>
+            <span>iPanorama 360<sup><?php echo esc_attr(IPANORAMA_PLUGIN_PLAN); ?></sup></span>
+            <span> - </span>
+            <?php esc_html_e('Items', 'ipanorama'); ?>
+        </div>
 		<div class="ipanorama-actions">
 			<a class="ipanorama-blue" href="?page=ipanorama_item" title="<?php esc_html_e('Create a new item', 'ipanorama'); ?>"><?php esc_html_e('Add Item', 'ipanorama'); ?></a>
 		</div>
