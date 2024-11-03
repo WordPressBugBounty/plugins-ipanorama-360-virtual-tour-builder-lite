@@ -524,7 +524,7 @@ class iPanorama_App {
 
                     if($marker->tooltip->active && !$this->IsNullOrEmptyString($marker->tooltip->data)) {
                         $data .= '<div class="ipnrm-data" data-marker-id="' . esc_attr($marker->id) . '">' . PHP_EOL;
-                        $data .= do_shortcode($marker->tooltip->data) . PHP_EOL;
+                        $data .= do_shortcode(wp_kses_post($marker->tooltip->data)) . PHP_EOL;
                         $data .= '</div>' . PHP_EOL;
                     }
                 }
@@ -539,7 +539,7 @@ class iPanorama_App {
 
                     if($marker->popover->active && !$this->IsNullOrEmptyString($marker->popover->data)) {
                         $data .= '<div class="ipnrm-data" data-marker-id="' . esc_attr($marker->id) . '">' . PHP_EOL;
-                        $data .= do_shortcode($marker->popover->data) . PHP_EOL;
+                        $data .= do_shortcode(wp_kses_post($marker->popover->data)) . PHP_EOL;
                         $data .= '</div>' . PHP_EOL;
                     }
                 }
