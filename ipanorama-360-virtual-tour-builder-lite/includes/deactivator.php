@@ -8,15 +8,19 @@ class iPanorama_Deactivator {
 		global $wpdb;
 		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
 
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$sql = "SELECT COUNT(*) FROM {$table}";
 		$count = $wpdb->get_var($sql);
+        // phpcs:enable
 		
 		if($count > 0) {
 			return;
 		}
 
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$sql = "DROP TABLE IF EXISTS {$table}";
 		$wpdb->query($sql);
+        // phpcs:enable
 		
 		delete_option('ipanorama_db_version');
 		delete_option('ipanorama_activated');
@@ -31,9 +35,10 @@ class iPanorama_Deactivator {
 			foreach($files as $file) {
 				$this->delete_files($file);
 			}
+            // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_rmdir
 			rmdir($target);
 		} else if(is_file($target)) {
-			unlink($target);
+            wp_delete_file($target);
 		}
 	}
 }

@@ -40,7 +40,7 @@ $reasons = [
                         <input type="text" name="reason-<?php echo esc_attr($key); ?>" placeholder="<?php echo esc_attr($value["input"]); ?>">
                     <?php } ?>
                     <?php if(isset($value["text"])) { ?>
-                        <p><?php echo $value["text"]; ?></p>
+                        <p><?php echo esc_html($value["text"]); ?></p>
                     <?php } ?>
                 </div>
             <?php } ?>

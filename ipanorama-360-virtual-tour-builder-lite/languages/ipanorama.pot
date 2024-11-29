@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: iPanorama 360\n"
-"POT-Creation-Date: 2024-10-24 12:40+0300\n"
+"POT-Creation-Date: 2024-11-28 18:43+0300\n"
 "PO-Revision-Date: 2022-12-20 14:47+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -1973,7 +1973,7 @@ msgstr ""
 msgid "Search Items"
 msgstr ""
 
-#: includes/page-settings.php:14 includes/plugin.php:693
+#: includes/page-settings.php:14 includes/plugin.php:712
 msgid "Settings"
 msgstr ""
 
@@ -2033,125 +2033,125 @@ msgstr ""
 msgid "CSS editor theme"
 msgstr ""
 
-#: includes/plugin.php:430
+#: includes/plugin.php:434
 msgid "Error: invalid ipanorama identifier attribute"
 msgstr ""
 
-#: includes/plugin.php:560
+#: includes/plugin.php:579
 msgid "Error: the ipanorama item can’t be found"
 msgstr ""
 
-#: includes/plugin.php:640 includes/plugin.php:1210 includes/plugin.php:1248
-#: includes/plugin.php:1326 includes/plugin.php:2214
+#: includes/plugin.php:659 includes/plugin.php:1229 includes/plugin.php:1267
+#: includes/plugin.php:1345 includes/plugin.php:2233
 msgid ""
 "Server error. Can't get access to the WordPress file system. The plugin "
 "can't work properly, please check the permissions."
 msgstr ""
 
-#: includes/plugin.php:651
+#: includes/plugin.php:670
 msgid ""
 "The plugin can't create the \"ipanorama\" directory. It's used to store the "
 "items data."
 msgstr ""
 
-#: includes/plugin.php:652 includes/plugin.php:660
+#: includes/plugin.php:671 includes/plugin.php:679
 msgid ""
 "Please check the permissions and owner of the WordPress upload directory."
 msgstr ""
 
-#: includes/plugin.php:659
+#: includes/plugin.php:678
 msgid ""
 "The \"ipanorama\" directory is not writable, therefore the item config files "
 "cannot be saved."
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/plugin.php:690 includes/plugin.php:691 includes/plugin.php:692
-#: includes/plugin.php:693 includes/plugin.php:695
+#: includes/plugin.php:709 includes/plugin.php:710 includes/plugin.php:711
+#: includes/plugin.php:712 includes/plugin.php:714
 msgid "iPanorama 360"
 msgstr ""
 
-#: includes/plugin.php:691
+#: includes/plugin.php:710
 msgid "All Items"
 msgstr ""
 
-#: includes/plugin.php:692
+#: includes/plugin.php:711
 msgid "Add New"
 msgstr ""
 
-#: includes/plugin.php:695
+#: includes/plugin.php:714
 msgid "Upgrade to Pro"
 msgstr ""
 
-#: includes/plugin.php:844 includes/plugin.php:888 includes/plugin.php:961
+#: includes/plugin.php:863 includes/plugin.php:907 includes/plugin.php:980
 msgid "Available only in the pro version"
 msgstr ""
 
-#: includes/plugin.php:848 includes/plugin.php:896 includes/plugin.php:964
+#: includes/plugin.php:867 includes/plugin.php:915 includes/plugin.php:983
 msgid "Server response error"
 msgstr ""
 
-#: includes/plugin.php:889
+#: includes/plugin.php:908
 msgid "Edit your text here"
 msgstr ""
 
-#: includes/plugin.php:890
+#: includes/plugin.php:909
 msgid "Custom js code error"
 msgstr ""
 
-#: includes/plugin.php:1022
+#: includes/plugin.php:1041
 msgid "Item updated"
 msgstr ""
 
-#: includes/plugin.php:1025 includes/plugin.php:1104
+#: includes/plugin.php:1044 includes/plugin.php:1123
 msgid "The operation failed, can't update the item"
 msgstr ""
 
-#: includes/plugin.php:1029 includes/plugin.php:1258 includes/plugin.php:2172
-#: includes/plugin.php:2178
+#: includes/plugin.php:1048 includes/plugin.php:1277 includes/plugin.php:2191
+#: includes/plugin.php:2197
 msgid "The operation failed"
 msgstr ""
 
-#: includes/plugin.php:1062
+#: includes/plugin.php:1081
 msgid ""
 "The operation failed, you can create only one item. To create more, buy the "
 "pro version."
 msgstr ""
 
-#: includes/plugin.php:1100
+#: includes/plugin.php:1119
 msgid "The item was successfully updated"
 msgstr ""
 
-#: includes/plugin.php:1125
+#: includes/plugin.php:1144
 msgid "The item was successfully created"
 msgstr ""
 
-#: includes/plugin.php:1128
+#: includes/plugin.php:1147
 msgid "The operation failed, can't create the item"
 msgstr ""
 
-#: includes/plugin.php:1214 includes/plugin.php:1252 includes/plugin.php:1330
-#: includes/plugin.php:2218
+#: includes/plugin.php:1233 includes/plugin.php:1271 includes/plugin.php:1349
+#: includes/plugin.php:2237
 msgid "Server error. The upload directory is not writable."
 msgstr ""
 
-#: includes/plugin.php:1245
+#: includes/plugin.php:1264
 msgid "The preload images were successfully created"
 msgstr ""
 
-#: includes/plugin.php:1301
+#: includes/plugin.php:1320
 msgid "The settings were successfully updated"
 msgstr ""
 
-#: includes/plugin.php:1304
+#: includes/plugin.php:1323
 msgid "The operation failed, can't update settings"
 msgstr ""
 
-#: includes/plugin.php:2196
+#: includes/plugin.php:2215
 msgid "The operation failed, can't delete data"
 msgstr ""
 
-#: includes/plugin.php:2227
+#: includes/plugin.php:2246
 msgid "All data was successfully deleted"
 msgstr ""
 

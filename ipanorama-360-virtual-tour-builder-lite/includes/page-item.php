@@ -60,7 +60,6 @@ $modified = mysql2date(get_option('date_format'), $item->modified) . ' at ' . my
 					<div class="ipanorama-left-panel">
 						<div class="ipanorama-list">
 							<a class="ipanorama-item ipanorama-small ipanorama-lite" href="https://1.envato.market/getipanorama360" target="_blank" al-if="appData.plan=='lite'"><?php esc_html_e('Buy Pro version', 'ipanorama'); ?></a>
-							<div class="ipanorama-item ipanorama-small ipanorama-pro" al-if="appData.plan=='pro'"><?php esc_html_e('Pro Version', 'ipanorama'); ?></div>
 						</div>
 					</div>
 					<div class="ipanorama-right-panel">

@@ -38,7 +38,7 @@ defined('ABSPATH') || exit;
 						<div class="ipanorama-label"><?php esc_html_e('Width', 'ipanorama'); ?> {{modalData.marker.view.autoWidth ? '[auto]' : '[px]'}}</div>
 						<div class="ipanorama-input-group ipanorama-long">
 							<div class="ipanorama-input-group-cell ipanorama-pinch">
-								<div class="ipanorama-btn ipanorama-default ipanorama-no-br" al-on.click="modalData.marker.view.autoWidth = !modalData.marker.view.autoWidth;" title="<?php _e('Enable/disable custom width in px', 'ipanorama'); ?>"><span><i class="xfa" al-attr.class.fa-check="!modalData.marker.view.autoWidth"></i></span></div>
+								<div class="ipanorama-btn ipanorama-default ipanorama-no-br" al-on.click="modalData.marker.view.autoWidth = !modalData.marker.view.autoWidth;" title="<?php esc_attr_e('Enable/disable custom width in px', 'ipanorama'); ?>"><span><i class="xfa" al-attr.class.fa-check="!modalData.marker.view.autoWidth"></i></span></div>
 							</div>
 							<div class="ipanorama-input-group-cell">
 								<input class="ipanorama-number ipanorama-long ipanorama-no-blr ipanorama-can-lock" al-integer="modalData.marker.view.width" al-attr.readonly="modalData.marker.view.autoWidth">
@@ -50,7 +50,7 @@ defined('ABSPATH') || exit;
 						<div class="ipanorama-label"><?php esc_html_e('Height', 'ipanorama'); ?> {{modalData.marker.view.autoHeight ? '[auto]' : '[px]'}}</div>
 						<div class="ipanorama-input-group ipanorama-long">
 							<div class="ipanorama-input-group-cell ipanorama-pinch">
-								<div class="ipanorama-btn ipanorama-default ipanorama-no-br" al-on.click="modalData.marker.view.autoHeight = !modalData.marker.view.autoHeight;" title="<?php _e('Enable/disable custom height in px', 'ipanorama'); ?>"><span><i class="xfa" al-attr.class.fa-check="!modalData.marker.view.autoHeight"></i></span></div>
+								<div class="ipanorama-btn ipanorama-default ipanorama-no-br" al-on.click="modalData.marker.view.autoHeight = !modalData.marker.view.autoHeight;" title="<?php esc_attr_e('Enable/disable custom height in px', 'ipanorama'); ?>"><span><i class="xfa" al-attr.class.fa-check="!modalData.marker.view.autoHeight"></i></span></div>
 							</div>
 							<div class="ipanorama-input-group-cell">
 								<input class="ipanorama-number ipanorama-long ipanorama-no-blr ipanorama-can-lock" al-integer="modalData.marker.view.height" al-attr.readonly="modalData.marker.view.autoHeight">

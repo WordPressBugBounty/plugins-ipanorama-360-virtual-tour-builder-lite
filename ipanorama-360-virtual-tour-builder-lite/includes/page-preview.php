@@ -16,6 +16,8 @@ wp_head();
 <body>
 <?php
     $atts = array('id'=>$this->virtualtour_id);
+
+    // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
     echo $this->shortcode($atts);
 
     if($this->previewPageSettings->wpFooter) {

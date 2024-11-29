@@ -34,59 +34,60 @@ class iPanorama_App {
 		define('IPANORAMA_PLUGIN_PLAN', 'lite');
 		
 		if($this->hasUserPermissions(get_current_user_id()) && is_admin()) {
-			$this->ajax_action_item_update = 'ipanorama_ajax_item_update';
-			$this->ajax_action_item_update_status = 'ipanorama_ajax_item_update_status';
-			$this->ajax_action_settings_update = 'ipanorama_ajax_settings_update';
-			$this->ajax_action_settings_get = 'ipanorama_ajax_settings_get';
-			$this->ajax_action_delete_data = 'ipanorama_ajax_delete_data';
-			$this->ajax_action_modal = 'ipanorama_ajax_modal';
-			
-			load_plugin_textdomain('ipanorama', false, dirname(dirname(plugin_basename(__FILE__))) . '/languages/');
-			
-			add_action('admin_menu', array($this, 'admin_menu'));
+            $this->ajax_action_item_update = 'ipanorama_ajax_item_update';
+            $this->ajax_action_item_update_status = 'ipanorama_ajax_item_update_status';
+            $this->ajax_action_settings_update = 'ipanorama_ajax_settings_update';
+            $this->ajax_action_settings_get = 'ipanorama_ajax_settings_get';
+            $this->ajax_action_delete_data = 'ipanorama_ajax_delete_data';
+            $this->ajax_action_modal = 'ipanorama_ajax_modal';
+
+            //Notice: Function _load_textdomain_just_in_time was called incorrectly.
+            //!!!load_plugin_textdomain('ipanorama', false, dirname(dirname(plugin_basename(__FILE__))) . '/languages/');
+
+            add_action('admin_menu', array($this, 'admin_menu'));
             add_action('admin_footer', array($this, 'admin_footer'));
-			add_action('admin_notices', array($this, 'admin_notices'));
-			add_action('in_admin_header', array($this, 'in_admin_header'));
-			add_action('wp_loaded', array($this, 'page_redirects'));
-			add_action('enqueue_block_editor_assets', array($this, 'block_editor_assets'));
-			
-			// important, because ajax has another url
-			add_action('wp_ajax_' . $this->ajax_action_item_update, array($this, 'ajax_item_update'));
-			add_action('wp_ajax_' . $this->ajax_action_item_update_status, array($this, 'ajax_item_update_status'));
-			add_action('wp_ajax_' . $this->ajax_action_settings_update, array($this, 'ajax_settings_update'));
-			add_action('wp_ajax_' . $this->ajax_action_settings_get, array($this, 'ajax_settings_get'));
-			add_action('wp_ajax_' . $this->ajax_action_delete_data, array($this, 'ajax_delete_data'));
-			add_action('wp_ajax_' . $this->ajax_action_modal, array($this, 'ajax_modal'));
-		} else {
-			add_shortcode(IPANORAMA_SHORTCODE_NAME, array($this, 'shortcode'));
-			add_filter('do_parse_request', array($this, 'do_parse_request'));
-			add_action('rest_api_init', array($this, 'rest_api_init'));
-		}
-		
-		if(function_exists('register_block_type')) {
-			register_block_type('ipanorama/shortcode-block', array(
-				'attributes' => array(
-					'id' => array(
-						'type' => 'string',
-						'default' => NULL
-					),
-					'width' => array(
-						'type' => 'string',
-						'default' => '100%'
-					),
-					'height' => array(
-						'type' => 'string',
-						'default' => '400'
-					),
-					'sceneid' => array(
-						'type' => 'string',
-						'default' => NULL
-					)
-				),
-				'editor_script' => 'ipanorama-gutenberg-block-js',
-				'render_callback' => array($this, 'block_render'),
-			));
-		}
+            add_action('admin_notices', array($this, 'admin_notices'));
+            add_action('in_admin_header', array($this, 'in_admin_header'));
+            add_action('wp_loaded', array($this, 'page_redirects'));
+            add_action('enqueue_block_editor_assets', array($this, 'block_editor_assets'));
+
+            // important, because ajax has another url
+            add_action('wp_ajax_' . $this->ajax_action_item_update, array($this, 'ajax_item_update'));
+            add_action('wp_ajax_' . $this->ajax_action_item_update_status, array($this, 'ajax_item_update_status'));
+            add_action('wp_ajax_' . $this->ajax_action_settings_update, array($this, 'ajax_settings_update'));
+            add_action('wp_ajax_' . $this->ajax_action_settings_get, array($this, 'ajax_settings_get'));
+            add_action('wp_ajax_' . $this->ajax_action_delete_data, array($this, 'ajax_delete_data'));
+            add_action('wp_ajax_' . $this->ajax_action_modal, array($this, 'ajax_modal'));
+        } else {
+            add_shortcode(IPANORAMA_SHORTCODE_NAME, array($this, 'shortcode'));
+            add_filter('do_parse_request', array($this, 'do_parse_request'));
+            add_action('rest_api_init', array($this, 'rest_api_init'));
+        }
+
+        if(function_exists('register_block_type')) {
+            register_block_type('ipanorama/shortcode-block', array(
+                'attributes' => array(
+                    'id' => array(
+                        'type' => 'string',
+                        'default' => NULL
+                    ),
+                    'width' => array(
+                        'type' => 'string',
+                        'default' => '100%'
+                    ),
+                    'height' => array(
+                        'type' => 'string',
+                        'default' => '400'
+                    ),
+                    'sceneid' => array(
+                        'type' => 'string',
+                        'default' => NULL
+                    )
+                ),
+                'editor_script' => 'ipanorama-gutenberg-block-js',
+                'render_callback' => array($this, 'block_render'),
+            ));
+        }
 	}
 	
 	function joinPaths() {
@@ -116,22 +117,7 @@ class iPanorama_App {
 	function IsNullOrEmptyString($str) {
 		return(!isset($str) || trim($str)==='');
 	}
-	
-	function getRandomUserAgent() {
-		$list = array(
-			'Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0',
-			'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:25.0) Gecko/20100101 Firefox/25.0',
-			'Mozilla/5.0 (Windows NT 6.1; rv:27.3) Gecko/20130101 Firefox/27.3',
-			'Mozilla/5.0 (Windows; U; Windows NT 6.1; rv:2.2) Gecko/20110201',
-			'Mozilla/5.0 (Windows; U; Windows NT 5.1; pl; rv:1.9.2.3) Gecko/20100401 Lightningquail/3.6.3',
-			'Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36',
-			'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/36.0.1944.0 Safari/537.36',
-			'Opera/12.80 (Windows NT 5.1; U; en) Presto/2.10.289 Version/12.02',
-			'Mozilla/5.0 (Windows NT 6.0; rv:2.0) Gecko/20100101 Firefox/4.0 Opera 12.14'
-		);
-		return $list[rand(0,count($list) - 1)];
-	}
-	
+
 	function filesystem_method() {
 		return 'direct';
 	}
@@ -435,11 +421,14 @@ class iPanorama_App {
 		}
 		
 		global $wpdb;
-		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
+		$table = $wpdb->prefix . 'ipanorama';
 		$upload_dir = wp_upload_dir();
 
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
         $sql = ($id ? $wpdb->prepare("SELECT * FROM {$table} WHERE id=%d AND NOT deleted", $id) : $wpdb->prepare("SELECT * FROM {$table} WHERE slug=%s AND NOT deleted LIMIT 0, 1", $slug));
         $item = $wpdb->get_row($sql, OBJECT);
+        // phpcs:enable
+
 		$mode = sanitize_key(filter_input(INPUT_GET, 'mode', FILTER_DEFAULT));
 		
 		if($item && ($item->active || (!$item->active && $mode == 'preview'))) {
@@ -470,6 +459,21 @@ class iPanorama_App {
                 $inlineStyles .= ($width ? 'width:' . $width . ';' : '');
                 $inlineStyles .= ($height ? 'height:' . $height . ';' : '');
             }
+
+            $wp_kses_allowed_tags = array_merge(
+                wp_kses_allowed_html( 'post' ),
+                [
+                    'iframe' => [
+                        'src' => [],
+                        'height' => [],
+                        'width' => [],
+                        'allow' => [],
+                        'style' => [],
+                        'frameborder' => [],
+                        'allowfullscreen' => []
+                    ]
+                ]
+            );
 
             $data = '';
 	        $data .= '<!-- ipanorama begin -->';
@@ -524,7 +528,7 @@ class iPanorama_App {
 
                     if($marker->tooltip->active && !$this->IsNullOrEmptyString($marker->tooltip->data)) {
                         $data .= '<div class="ipnrm-data" data-marker-id="' . esc_attr($marker->id) . '">' . PHP_EOL;
-                        $data .= do_shortcode(wp_kses_post($marker->tooltip->data)) . PHP_EOL;
+                        $data .= do_shortcode(wp_kses($marker->tooltip->data, $wp_kses_allowed_tags)) . PHP_EOL;
                         $data .= '</div>' . PHP_EOL;
                     }
                 }
@@ -539,7 +543,7 @@ class iPanorama_App {
 
                     if($marker->popover->active && !$this->IsNullOrEmptyString($marker->popover->data)) {
                         $data .= '<div class="ipnrm-data" data-marker-id="' . esc_attr($marker->id) . '">' . PHP_EOL;
-                        $data .= do_shortcode(wp_kses_post($marker->popover->data)) . PHP_EOL;
+                        $data .= do_shortcode(wp_kses($marker->popover->data, $wp_kses_allowed_tags)) . PHP_EOL;
                         $data .= '</div>' . PHP_EOL;
                     }
                 }
@@ -578,10 +582,12 @@ class iPanorama_App {
 				if($virtualtour_id != null) {
 					global $wpdb;
 					$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
-					
+
+                    // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 					$sql = sprintf('SELECT * FROM %1$s WHERE id=%2$d AND NOT deleted', $table, $virtualtour_id);
 					$item = $wpdb->get_row($sql, OBJECT);
-					
+                    // phpcs:enable
+
 					if($item && ($item->active || (!$item->active && $mode == 'preview' && $this->hasUserPermissions(get_current_user_id())))) {
 						$this->virtualtour_id = $item->id;
 						$this->virtualtour_version = strtotime(mysql2date('Y-m-d H:i:s', $item->modified));
@@ -596,9 +602,11 @@ class iPanorama_App {
 				if($virtualtour_slug != null) {
 					global $wpdb;
 					$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
-					
+
+                    // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 					$sql = sprintf('SELECT * FROM %1$s WHERE slug="%2$s" AND NOT deleted', $table, $virtualtour_slug);
 					$item = $wpdb->get_row($sql, OBJECT);
+                    // phpcs:enable
 					
 					if($item && ($item->active || (!$item->active && $mode == 'preview' && $this->hasUserPermissions(get_current_user_id())))) {
 						$this->virtualtour_id = $item->id;
@@ -713,7 +721,7 @@ class iPanorama_App {
 
         // global settings to help ajax work
         $globals = array(
-            'token' => base64_encode(json_encode([
+            'token' => base64_encode(wp_json_encode([
                 'plugin_name' => IPANORAMA_PLUGIN_NAME,
                 'plugin_version' => IPANORAMA_PLUGIN_VERSION,
                 'wordpress' => $wp_version,
@@ -741,7 +749,10 @@ class iPanorama_App {
 		if($page==='ipanorama') {
 			$action = sanitize_key(filter_input(INPUT_GET, 'action', FILTER_DEFAULT));
 			if($action) {
-				$url = remove_query_arg(array('action', 'id', '_wpnonce'), $_SERVER['REQUEST_URI']);
+                // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+                $url = sanitize_text_field( wp_unslash( $_SERVER['REQUEST_URI'] ) );
+
+				$url = remove_query_arg( array('action', 'id', '_wpnonce'), $url );
 				header('Refresh:0; url="' . $url . '"', true, 303);
 				//wp_redirect($url); // does not work delete and duplicate operations on XAMPP
 			}
@@ -754,7 +765,7 @@ class iPanorama_App {
 	function block_editor_assets() {
 		$plugin_url = plugin_dir_url(dirname(__FILE__));
 		
-		wp_enqueue_script('ipanorama-gutenberg-block-js', $plugin_url . 'gutenberg/block.min.js', array('wp-blocks', 'wp-element', 'wp-components', 'wp-editor'), IPANORAMA_PLUGIN_VERSION);
+		wp_enqueue_script('ipanorama-gutenberg-block-js', $plugin_url . 'gutenberg/block.min.js', array('wp-blocks', 'wp-element', 'wp-components', 'wp-editor'), IPANORAMA_PLUGIN_VERSION, false);
 		wp_enqueue_style('ipanorama-gutenberg-block-css', $plugin_url . 'gutenberg/block.min.css', array('wp-edit-blocks'), IPANORAMA_PLUGIN_VERSION);
 	}
 	
@@ -794,8 +805,10 @@ class iPanorama_App {
 		global $wpdb;
 		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
 
-		$sql = sprintf('SELECT id as value, title as label FROM %1$s WHERE NOT deleted AND active ORDER BY id DESC', $table);
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+        $sql = sprintf('SELECT id as value, title as label FROM %1$s WHERE NOT deleted AND active ORDER BY id DESC', $table);
 		$list = $wpdb->get_results($sql, 'ARRAY_A');
+        // phpcs:enable
 
 		array_unshift($list, array('value'=> '', 'label'=>'None'));
 
@@ -807,8 +820,10 @@ class iPanorama_App {
         global $wpdb;
         $table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
 
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
         $sql = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%d AND NOT deleted", $id);
         $item = $wpdb->get_row($sql, OBJECT);
+        // phpcs:enable
 
         if($item && ($item->active || (!$item->active && $this->has_access))) {
             $config = unserialize($item->config);
@@ -861,6 +876,23 @@ class iPanorama_App {
 		$page = sanitize_key(filter_input(INPUT_GET, 'page', FILTER_DEFAULT));
 
 		if($page==='ipanorama_item') {
+            $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+            if ( IPANORAMA_PLUGIN_PLAN == 'lite' && !$id ) {
+                global $wpdb;
+                $table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
+
+                // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+                $count = $wpdb->get_var("SELECT COUNT(*) FROM {$table}");
+
+                if ( $count >= 3 ) {
+                    echo '<div class="notice notice-error is-dismissible">';
+                    echo '<p>iPanorama 360: ' . esc_html__('You can create only 3 virtual tours. If you need more, upgrade to the pro version.', 'ipanorama') . '</p>';
+                    echo '</div>';
+                    return;
+                }
+            }
+
 			$plugin_url = plugin_dir_url(dirname(__FILE__));
 			$upload_dir = wp_upload_dir();
 
@@ -892,8 +924,6 @@ class iPanorama_App {
 				'ajax_msg_error' => esc_html__('Server response error', 'ipanorama') //Look at the console (F12 or Ctrl+Shift+I, Console tab) for more information
 			);
 
-			$id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
-
 			$globals['ajax_action_get'] = $this->ajax_action_settings_get;
 			$globals['ajax_action_update'] = $this->ajax_action_item_update;
 			$globals['ajax_action_modal'] = $this->ajax_action_modal;
@@ -904,7 +934,7 @@ class iPanorama_App {
 			$settings_key = 'ipanorama_settings';
 			$settings_value = get_option($settings_key);
 			if($settings_value) {
-				$globals['settings'] = json_encode(unserialize($settings_value));
+				$globals['settings'] = wp_json_encode(unserialize($settings_value));
 			}
 
 			// get item data from DB
@@ -912,11 +942,14 @@ class iPanorama_App {
 				global $wpdb;
 				$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
 
+                // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 				$sql = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%s", $id);
 				$item = $wpdb->get_row($sql, OBJECT);
+                // phpcs:enable
+
 				if($item && $this->hasUserPermissions($item->author)) {
 					//$globals['config'] = json_encode(unserialize($item->data)); // deprecated, because in some situations we can have double quotes that corrupts the json structure
-					$globals['config'] = htmlspecialchars(json_encode(unserialize($item->data)), ENT_QUOTES, 'UTF-8');
+					$globals['config'] = htmlspecialchars(wp_json_encode(unserialize($item->data)), ENT_QUOTES, 'UTF-8');
 				} else {
 					exit;
 				}
@@ -970,7 +1003,7 @@ class iPanorama_App {
 			$settings_key = 'ipanorama_settings';
 			$settings_value = get_option($settings_key);
 			if($settings_value) {
-				$globals['config'] = json_encode(unserialize($settings_value));
+				$globals['config'] = wp_json_encode(unserialize($settings_value));
 			}
 
 			require_once(plugin_dir_path( dirname(__FILE__) ) . 'includes/page-settings.php' );
@@ -996,13 +1029,16 @@ class iPanorama_App {
 			$result = false;
 			
 			if(isset($config->id) && isset($config->active)) {
-				$query = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%s", $config->id);
+                // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+                $query = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%s", $config->id);
 				$item = $wpdb->get_row($query, OBJECT);
-				
+                // phpcs:enable
+
 				if($item && $this->hasUserPermissions($item->author)) {
 					$itemData = unserialize($item->data);
 					$itemData->active = $config->active;
-					
+
+                    // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 					$result = $wpdb->update(
 						$table,
 						array(
@@ -1048,16 +1084,17 @@ class iPanorama_App {
 			$inputId = filter_input(INPUT_POST, 'id', FILTER_UNSAFE_RAW);
 			$type = filter_input(INPUT_POST, 'type', FILTER_UNSAFE_RAW);
 			$flag = true;
-			
-			if(IPANORAMA_PLUGIN_PLAN == 'lite' && !$inputId) {
-				$rowcount = $wpdb->get_var("SELECT COUNT(*) FROM  {$table}");
 
-				if(!($rowcount == 0 || ($rowcount == 1 && $inputId))) {
-					$flag = false;
-					$error = true;
-					$data['msg'] = esc_html__('The operation failed, you can create only one item. To create more, buy the pro version.', 'ipanorama');
-				}
-			}
+            if( IPANORAMA_PLUGIN_PLAN == 'lite' && !$inputId ) {
+                // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+                $count = $wpdb->get_var("SELECT COUNT(*) FROM {$table}");
+
+                if ( $count >= 3 ) {
+                    $flag = false;
+                    $error = true;
+                    $data['msg'] = esc_html__('You can create only 3 virtual tours. If you need more, upgrade to the pro version.', 'ipanorama');
+                }
+            }
 			
 			if($flag) {
 				if($type == 'config') {
@@ -1069,12 +1106,16 @@ class iPanorama_App {
 					
 					if($inputId) {
 						$result = false;
-						
+
+                        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 						$sql = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%s", $inputId);
 						$item = $wpdb->get_row($sql, OBJECT);
+                        // phpcs:enable
+
 						if($item && $this->hasUserPermissions($item->author)) {
 							$itemData->slug = sanitize_title(($itemData->slug ? $itemData->slug : $itemData->title));
-							
+
+                            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 							$result = $wpdb->update(
 								$table,
 								array(
@@ -1097,11 +1138,12 @@ class iPanorama_App {
 						} else {
 							$error = true;
 							$data['id'] = $inputId;
-							$data['msg'] = esc_html__('The operation failed, can\'t update the item' . $maxp, 'ipanorama');
+							$data['msg'] = esc_html__('The operation failed, can\'t update the item', 'ipanorama');
 						}
 					} else {
 						$itemData->slug = sanitize_title(($itemData->slug ? $itemData->slug : $itemData->title));
-						
+
+                        // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 						$result = $wpdb->insert(
 							$table,
 							array(
@@ -1146,7 +1188,7 @@ class iPanorama_App {
 									$wp_filesystem->mkdir($dir_root);
 								}
 								
-								$wp_filesystem->put_contents($this->joinPaths($dir_root, $file_json), json_encode($itemConfig), FS_CHMOD_FILE);
+								$wp_filesystem->put_contents($this->joinPaths($dir_root, $file_json), wp_json_encode($itemConfig), FS_CHMOD_FILE);
 								$wp_filesystem->put_contents($this->joinPaths($dir_root, $file_main_css), $this->getMainCss($itemData, $inputId), FS_CHMOD_FILE);
 								$wp_filesystem->put_contents($this->joinPaths($dir_root, $file_custom_css), $itemData->customCSS->data, FS_CHMOD_FILE);
 								
@@ -1199,7 +1241,7 @@ class iPanorama_App {
 									}
 								}
 								
-								$wp_filesystem->put_contents($this->joinPaths($dir_root, $file_json), json_encode($itemConfig), FS_CHMOD_FILE);
+								$wp_filesystem->put_contents($this->joinPaths($dir_root, $file_json), wp_json_encode($itemConfig), FS_CHMOD_FILE);
 								//======================================
 							} else {
 								$error = true;
@@ -1281,9 +1323,8 @@ class iPanorama_App {
 				$result = false;
 				
 				if(get_option($key) == false) {
-					$deprecated = null;
 					$autoload = 'no';
-					$result = add_option($key, $value, $deprecated, $autoload);
+					$result = add_option($key, $value, "", $autoload);
 				} else {
 					$old_value = get_option($key);
 					if($old_value === $value) {
@@ -1384,6 +1425,7 @@ class iPanorama_App {
 						$config = $this->joinPaths($dir, 'modal-config.php');
 						
 						if(file_exists($js)) {
+                            // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
 							$file = fopen($js, 'r');
 							while(!feof($file)) {
 								$line = fgets($file);
@@ -1406,6 +1448,8 @@ class iPanorama_App {
 									break;
 								}
 							}
+
+                            // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose
 							fclose($file);
 						}
 						
@@ -1426,6 +1470,7 @@ class iPanorama_App {
 						$config = $this->joinPaths($dir, 'modal-config.php');
 						
 						if(file_exists($js)) {
+                            // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fopen
 							$file = fopen($js, 'r');
 							while(!feof($file)) {
 								$line = fgets($file);
@@ -1448,6 +1493,8 @@ class iPanorama_App {
 									break;
 								}
 							}
+
+                            // phpcs:ignore WordPress.WP.AlternativeFunctions.file_system_operations_fclose
 							fclose($file);
 						}
 						
@@ -2194,8 +2241,9 @@ class iPanorama_App {
 		if(check_ajax_referer('ipanorama_ajax', 'nonce', false)) {
 			global $wpdb;
 			$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
-			
-			foreach($wpdb->get_results("SELECT id FROM {$table}") as $key => $item) {
+
+            // phpcs:ignore WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+            foreach($wpdb->get_results("SELECT id FROM {$table}") as $key => $item) {
 				// [filemanager] delete file
 				if(wp_is_writable(IPANORAMA_PLUGIN_UPLOAD_DIR)) {
 					$dir_root = $this->joinPaths(IPANORAMA_PLUGIN_UPLOAD_DIR, $item->id);
@@ -2216,8 +2264,10 @@ class iPanorama_App {
 			}
 			
 			if(!$error) {
+                // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 				$sql = "TRUNCATE TABLE {$table}";
 				$result = $wpdb->query($sql);
+                // phpcs:enable
 				
 				if($result) {
 					$data['msg'] = esc_html__('All data was successfully deleted', 'ipanorama');

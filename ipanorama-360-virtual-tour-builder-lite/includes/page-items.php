@@ -25,7 +25,10 @@ $list_table->prepare_items();
 		<?php $list_table->views(); ?>
 		<form method="post">
 			<?php $list_table->search_box(esc_html__('Search Items', 'ipanorama'),'item'); ?>
-			<input type="hidden" name="page" value="<?php echo sanitize_key(filter_var($_REQUEST['page'], FILTER_DEFAULT)) ?>">
+            <input type="hidden" name="page" value="<?php
+            // phpcs:ignore WordPress.Security.NonceVerification.Recommended, WordPress.Security.ValidatedSanitizedInput.InputNotValidated
+            echo sanitize_key( filter_var( wp_unslash( $_REQUEST['page'] ), FILTER_DEFAULT ) ) ?>
+            ">
 			<?php $list_table->display(); ?>
 		</form>
 	</div>

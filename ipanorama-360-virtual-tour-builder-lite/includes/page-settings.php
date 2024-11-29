@@ -31,7 +31,6 @@ $page = sanitize_key(filter_input(INPUT_GET, 'page', FILTER_DEFAULT));
 					<div class="ipanorama-left-panel">
 						<div class="ipanorama-list">
 							<a class="ipanorama-item ipanorama-small ipanorama-lite" href="https://1.envato.market/getipanorama360" al-if="appData.plan=='lite'"><?php esc_html_e('Buy Pro version', 'ipanorama'); ?></a>
-							<a class="ipanorama-item ipanorama-small ipanorama-pro" href="#" al-if="appData.plan=='pro'"><?php esc_html_e('Pro Version', 'ipanorama'); ?></a>
 						</div>
 					</div>
 					<div class="ipanorama-right-panel">

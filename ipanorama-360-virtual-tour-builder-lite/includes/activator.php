@@ -8,22 +8,23 @@ class iPanorama_Activator {
 		require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
 		
 		global $wpdb;
-		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
+        $charsetCollate = $wpdb->has_cap( 'collation' ) ? $wpdb->get_charset_collate() : '';
 
+        $table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
 		$sql = "CREATE TABLE {$table} (
 			id bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-			title text COLLATE utf8_unicode_ci DEFAULT NULL,
-			slug varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+			title text DEFAULT NULL,
+			slug varchar(200) DEFAULT NULL,
 			active tinyint NOT NULL DEFAULT 1,
-			data longtext COLLATE utf8_unicode_ci DEFAULT NULL,
-			config longtext COLLATE utf8_unicode_ci DEFAULT NULL,
+			data longtext DEFAULT NULL,
+			config longtext DEFAULT NULL,
 			author bigint(20) UNSIGNED NOT NULL DEFAULT 0,
 			editor bigint(20) UNSIGNED NOT NULL DEFAULT 0,
 			deleted tinyint NOT NULL DEFAULT 0,
 			created datetime NULL,
 			modified datetime NULL,
 			UNIQUE KEY id (id)
-		);";
+		) {$charsetCollate};";
 		dbDelta($sql);
 		
 		update_option('ipanorama_db_version', IPANORAMA_DB_VERSION, false);
@@ -38,24 +39,10 @@ class iPanorama_Activator {
 		global $wpdb;
 		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
 
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 		$sql = $wpdb->prepare("UPDATE {$table} SET editor=author WHERE editor=%d", 0);
 		$wpdb->query($sql);
-		
-		// Add support Emoji
-		$sql = "ALTER TABLE {$table} DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
-		$wpdb->query($sql);
-		
-		$sql = "ALTER TABLE {$table} MODIFY title text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
-		$wpdb->query($sql);
-		
-		$sql = "ALTER TABLE {$table} MODIFY data longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
-		$wpdb->query($sql);
-		
-		$sql = "ALTER TABLE {$table} MODIFY config longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
-		$wpdb->query($sql);
-		
-		$sql = "ALTER TABLE {$table} MODIFY slug varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci";
-		$wpdb->query($sql);
+        // phpcs:enable
 	}
 	
 	public function install_data() {

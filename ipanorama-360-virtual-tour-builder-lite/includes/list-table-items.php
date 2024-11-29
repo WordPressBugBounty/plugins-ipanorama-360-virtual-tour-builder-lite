@@ -119,8 +119,6 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 			case 'modified':
 			case 'id':
 				return $item[$column_name];
-			default:
-				return print_r($item, true);
 		}
 	}
 	
@@ -182,20 +180,22 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 						esc_url($url),
 						esc_html__('Edit', 'ipanorama')
 					);
-					
-					$args = array(
-						'page' => $page,
-						'item_status' => $item_status,
-						'action' => 'copy',
-						'id'  => $item['id']
-					);
-					$url = add_query_arg($args, 'admin.php');
-					
-					$actions['copy'] = sprintf(
-						'<a href="%1$s">%2$s</a>',
-						esc_url(wp_nonce_url($url, 'copy_' . $item['id'])),
-						esc_html__('Duplicate', 'ipanorama')
-					);
+
+                    if ( IPANORAMA_PLUGIN_PLAN !== 'lite' ) {
+                        $args = array(
+                            'page' => $page,
+                            'item_status' => $item_status,
+                            'action' => 'copy',
+                            'id' => $item['id']
+                        );
+                        $url = add_query_arg($args, 'admin.php');
+
+                        $actions['copy'] = sprintf(
+                            '<a href="%1$s">%2$s</a>',
+                            esc_url(wp_nonce_url($url, 'copy_' . $item['id'])),
+                            esc_html__('Duplicate', 'ipanorama')
+                        );
+                    }
 					
 					$args = array(
 						'page' => $page,
@@ -353,10 +353,10 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 				);
 			} break;
 			default: {
-				$actions = array(
-					'copy'  => esc_html__('Duplicate', 'ipanorama'),
-					'trash' => esc_html__('Move to Trash', 'ipanorama')
-				);
+                if ( IPANORAMA_PLUGIN_PLAN !== 'lite' ) {
+                    $actions['copy'] = esc_html__('Duplicate', 'ipanorama');
+                }
+				$actions['trash'] = esc_html__('Move to Trash', 'ipanorama');
 			} break;
 		}
 		
@@ -366,27 +366,38 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 	function process_trash_action($id, $flag) {
 		global $wpdb;
 		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
-		
-		$sql = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%d", $id);
+
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+        $sql = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%d", $id);
 		$item = $wpdb->get_row($sql, OBJECT);
+        // phpcs:enable
 		
 		if($item && $this->hasUserPermissions($item->author)) {
-			$wpdb->update(
-				$table,
-				array(
-					'deleted'=> $flag
-				),
-				array('id'=>$id)
-			);
+            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+			$wpdb->update($table, array('deleted'=> $flag), array('id'=>$id));
 		}
 	}
 	
 	function process_copy_action($id) {
 		global $wpdb;
 		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
-		
+
+        if ( IPANORAMA_PLUGIN_PLAN == 'lite' ) {
+            // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+            $count = $wpdb->get_var("SELECT COUNT(*) FROM {$table}");
+
+            if ($count >= 3) {
+                echo '<div class="notice notice-error is-dismissible">';
+                echo '<p>iPanorama 360: ' . esc_html__('You can create only 3 virtual tours. If you need more, upgrade to the pro version.', 'ipanorama') . '</p>';
+                echo '</div>';
+                return;
+            }
+        }
+
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 		$sql = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%d", $id);
 		$item = $wpdb->get_row($sql, OBJECT);
+        // phpcs:enable
 		
 		if($item && $this->hasUserPermissions($item->author)) {
 			$author = get_current_user_id();
@@ -394,7 +405,8 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 			$itemData->slug = sanitize_title(($itemData->slug ? $itemData->slug : $itemData->title));
 			$itemData->title = esc_html__('[Duplicate] ', 'ipanorama') . $itemData->title;
 			$itemConfig = unserialize($item->config);
-			
+
+            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery
 			$result = $wpdb->insert(
 				$table,
 				array(
@@ -432,11 +444,14 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 	function process_delete_action($id) {
 		global $wpdb;
 		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
-		
-		$sql = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%d", $id);
+
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+        $sql = $wpdb->prepare("SELECT * FROM {$table} WHERE id=%d", $id);
 		$item = $wpdb->get_row($sql, OBJECT);
+        // phpcs:enable
 		
 		if($item && $this->hasUserPermissions($item->author)) {
+            // phpcs:ignore WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 			$result = $wpdb->delete($table, ['id'=>$id], ['%d']);
 
 			// [filemanager] delete file
@@ -560,12 +575,15 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 		global $wpdb;
 		$table = $wpdb->prefix . IPANORAMA_PLUGIN_NAME;
 
+        // phpcs:disable WordPress.Security.NonceVerification.Recommended, WordPress.Security.NonceVerification.Missing
 		$item_status = sanitize_key(filter_input(INPUT_GET, 'item_status', FILTER_DEFAULT));
 		$orderby = (isset($_GET['orderby']) ? strtolower(sanitize_key(filter_input(INPUT_GET, 'orderby', FILTER_DEFAULT))) : 'id');
 		$order   = (isset($_GET['order']) ? strtolower(sanitize_key(filter_input(INPUT_GET, 'order', FILTER_DEFAULT))) : 'desc');
 		$author  = (isset($_GET['author']) ? filter_input(INPUT_GET, 'author', FILTER_SANITIZE_NUMBER_INT) : NULL);
 		$editor  = (isset($_GET['editor']) ? filter_input(INPUT_GET, 'editor', FILTER_SANITIZE_NUMBER_INT) : NULL);
 		$search  = (isset($_POST['s']) ? htmlspecialchars(filter_input(INPUT_POST, 's', FILTER_DEFAULT)) : NULL);
+        // phpcs:enable
+
 		$current_user = get_current_user_id();
 
         // check user input
@@ -581,10 +599,12 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 		
 		$role = $this->getUserActiveRole($current_user);
 		if(current_user_can('manage_options') || ($role && $role['state'] == 'all')) { // by default, the manage_options permission is only given to 'Super Users' and 'Administrators'
-			$this->count_all   = $wpdb->query("SELECT id FROM {$table} WHERE NOT deleted");
+            // phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+            $this->count_all   = $wpdb->query("SELECT id FROM {$table} WHERE NOT deleted");
 			$this->count_mine  = $wpdb->query($wpdb->prepare("SELECT id FROM {$table} WHERE NOT deleted AND author=%s", $current_user));
 			$this->count_trash = $wpdb->query("SELECT id FROM {$table} WHERE deleted");
-			
+            // phpcs:enable
+
 			switch($item_status) {
 				case 'trash': {
 					if($author) {
@@ -634,11 +654,13 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 				
 				if(count($users) > 0) {
 					$users = implode(',', $users);
-					
+
+                    // phpcs:disable WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
 					$this->count_all = $wpdb->query($wpdb->prepare("SELECT id FROM {$table} WHERE author IN (%s) AND NOT deleted", $users));
 					$this->count_mine  = $wpdb->query($wpdb->prepare("SELECT id FROM {$table} WHERE author=%s AND NOT deleted", $current_user));
 					$this->count_trash = $wpdb->query($wpdb->prepare("SELECT id FROM {$table} WHERE author IN (%s) AND deleted", $users));
-					
+                    // phpcs:enable
+
 					switch($item_status) {
 						case 'trash': {
 							$sql = sprintf('SELECT * FROM %1$s WHERE author IN (%2$s) AND deleted %3$s ORDER BY %4$s %5$s LIMIT %6$d, %7$d', $table, $users, $sql_search, $orderby, $order, $currentPage, $itemsPerPage);
@@ -656,9 +678,11 @@ class iPanorama_List_Table_Items extends WP_List_Table {
 				}
 			}
 		}
-		
-		$this->items = $wpdb->get_results($sql, 'ARRAY_A');
+
+        // phpcs:disable WordPress.DB.PreparedSQL.NotPrepared, WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
+        $this->items = $wpdb->get_results($sql, 'ARRAY_A');
 		$total_items = $wpdb->query($sql_total_items);
+        // phpcs:enable
 		
 		$this->set_pagination_args( array(
 			'total_items' => $total_items,
