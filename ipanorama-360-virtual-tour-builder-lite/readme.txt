@@ -4,7 +4,7 @@ Tags: virtual tour, panorama, panorama viewer, virtual tour, 360 panorama
 Requires at least: 4.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.8.7
+Stable tag: 1.8.8
 License: GPLv3
 
 Let's create virtual tours for your site that empowers your visitors and clients!!! Build a live tour in just a few steps.
@@ -138,6 +138,9 @@ The lite version has only one limitation. You can create and use only one item. 
 
 
 == Changelog ==
+
+= 1.8.8
+* Fix: issue with marker position depending on device pixel ratio (devicePixelRatio)
 
 = 1.8.7
 * Fix: support iframe for popup and tooltip data
