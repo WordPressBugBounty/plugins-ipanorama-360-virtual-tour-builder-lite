@@ -4,7 +4,7 @@ Tags: virtual tour, panorama, panorama viewer, virtual tour, 360 panorama
 Requires at least: 4.0
 Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.8.8
+Stable tag: 1.9.0
 License: GPLv3
 
 Let's create virtual tours for your site that empowers your visitors and clients!!! Build a live tour in just a few steps.
@@ -139,28 +139,32 @@ The lite version has only one limitation. You can create and use only one item. 
 
 == Changelog ==
 
-= 1.8.8
+= 1.9.0 =
+* Mod: lazy load mode – panorama is loaded only when visible in the web view screen
+* New: toggle the white logo
+
+= 1.8.8 =
 * Fix: issue with marker position depending on device pixel ratio (devicePixelRatio)
 
-= 1.8.7
+= 1.8.7 =
 * Fix: support iframe for popup and tooltip data
 
-= 1.8.6
+= 1.8.6 =
 * Fix: scene transition effects, black screen
 * Fix: tooltip & popover data sanitization
 
-= 1.8.5
+= 1.8.5 =
 * Mod: upgraded the threejs lib to r127
 * Mod: redesigned the UI
 
-= 1.8.4
+= 1.8.4 =
 * Fix: unauthorized access to preview of deactivated panoramas for sub+ users
 
-= 1.8.3
+= 1.8.3 =
 * Fix: constant FILTER_SANITIZE_STRIPPED is deprecated
 * Fix: unauthorized access to config.json of deactivated panoramas
 
-= 1.8.2
+= 1.8.2 =
 * Fix: unauthorized access to view deactivated panoramas
 
 = 1.8.1 =

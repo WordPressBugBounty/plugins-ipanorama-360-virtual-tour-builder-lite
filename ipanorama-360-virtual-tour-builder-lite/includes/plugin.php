@@ -298,9 +298,21 @@ class iPanorama_App {
 		$main_css .= ($itemData->background->position ? 'background-position:' . $itemData->background->position . ';' . PHP_EOL : '');
 		
 		$main_css .= '}' . PHP_EOL;
-		
-		
-		$itemSelector = '.ipnrm-' . $itemId;
+
+
+        $itemSelector = '.ipnrm-' . $itemId;
+
+
+        if($itemData->background->logo === false) {
+            $main_css .= $itemSelector . ' ' . '.ipnrm-first-load {';
+            $main_css .= 'cursor:pointer;' . PHP_EOL;
+            $main_css .= '}' . PHP_EOL;
+
+            $main_css .= $itemSelector . ' ' . '.ipnrm-first-load:before {';
+            $main_css .= 'display:none;' . PHP_EOL;
+            $main_css .= '}' . PHP_EOL;
+        }
+
 		
 		$sceneId = 0;
 		foreach($itemData->scenes as $sceneKey => $scene) {

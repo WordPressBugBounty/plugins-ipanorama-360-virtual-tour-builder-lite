@@ -185,6 +185,12 @@ $modified = mysql2date(get_option('date_format'), $item->modified) . ' at ' . my
 												<div class="ipanorama-label"><?php esc_html_e('Inline background styles', 'ipanorama'); ?></div>
 												<div al-toggle="appData.config.background.inline"></div>
 											</div>
+
+                                            <div class="ipanorama-control">
+                                                <div class="ipanorama-helper" title="<?php esc_html_e('Show/hide the white logo', 'ipanorama'); ?>"></div>
+                                                <div class="ipanorama-label"><?php esc_html_e('Show/hide the white logo', 'ipanorama'); ?></div>
+                                                <div al-toggle="appData.config.background.logo"></div>
+                                            </div>
 											
 											<div class="ipanorama-control">
 												<div class="ipanorama-helper" title="<?php esc_html_e('Background color in hexadecimal format (#fff or #555555)', 'ipanorama'); ?>"></div>
