@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: iPanorama 360\n"
-"POT-Creation-Date: 2024-11-28 18:43+0300\n"
+"POT-Creation-Date: 2025-04-21 16:54+0300\n"
 "PO-Revision-Date: 2022-12-20 14:47+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -25,7 +25,7 @@ msgstr ""
 #: assets/js/lib/ipanorama/widgets/civic/modal-config.php:14
 #: assets/js/lib/ipanorama/widgets/list/modal-config.php:14
 #: assets/js/lib/ipanorama/widgets/modern/modal-config.php:14
-#: includes/page-item.php:120
+#: includes/page-item.php:119
 msgid "Setup widget settings"
 msgstr ""
 
@@ -318,27 +318,27 @@ msgstr ""
 msgid "Skip & Deactivate"
 msgstr ""
 
-#: includes/list-table-items.php:155 includes/list-table-items.php:351
+#: includes/list-table-items.php:153 includes/list-table-items.php:351
 msgid "Restore"
 msgstr ""
 
-#: includes/list-table-items.php:169 includes/list-table-items.php:352
+#: includes/list-table-items.php:167 includes/list-table-items.php:352
 msgid "Delete Permanently"
 msgstr ""
 
-#: includes/list-table-items.php:183
+#: includes/list-table-items.php:181
 msgid "Edit"
 msgstr ""
 
-#: includes/list-table-items.php:197 includes/list-table-items.php:357
+#: includes/list-table-items.php:196 includes/list-table-items.php:357
 msgid "Duplicate"
 msgstr ""
 
-#: includes/list-table-items.php:211 includes/list-table-items.php:358
+#: includes/list-table-items.php:211 includes/list-table-items.php:359
 msgid "Move to Trash"
 msgstr ""
 
-#: includes/list-table-items.php:222 includes/page-item.php:68
+#: includes/list-table-items.php:222 includes/page-item.php:67
 msgid "Preview"
 msgstr ""
 
@@ -355,8 +355,8 @@ msgid "Trash"
 msgstr ""
 
 #: includes/list-table-items.php:321 includes/page-item.php:46
-#: includes/page-item.php:421 includes/page-item.php:859
-#: includes/page-item.php:1383 includes/page-item.php:1539
+#: includes/page-item.php:426 includes/page-item.php:864
+#: includes/page-item.php:1388 includes/page-item.php:1544
 msgid "Title"
 msgstr ""
 
@@ -364,7 +364,7 @@ msgstr ""
 msgid "Active"
 msgstr ""
 
-#: includes/list-table-items.php:323 includes/page-item.php:81
+#: includes/list-table-items.php:323 includes/page-item.php:80
 msgid "Shortcode"
 msgstr ""
 
@@ -384,7 +384,14 @@ msgstr ""
 msgid "Modified"
 msgstr ""
 
-#: includes/list-table-items.php:395
+#: includes/list-table-items.php:391 includes/plugin.php:906
+#: includes/plugin.php:1111
+msgid ""
+"You can create only 1 virtual tour. If you need more, upgrade to the pro "
+"version."
+msgstr ""
+
+#: includes/list-table-items.php:406
 msgid "[Duplicate] "
 msgstr ""
 
@@ -400,12 +407,12 @@ msgstr ""
 msgid "Sets a marker width (auto or px)"
 msgstr ""
 
-#: includes/modal-edit-marker.php:38 includes/page-item.php:1103
-#: includes/page-item.php:1431
+#: includes/modal-edit-marker.php:38 includes/page-item.php:1108
+#: includes/page-item.php:1436
 msgid "Width"
 msgstr ""
 
-#: includes/modal-edit-marker.php:41 includes/page-item.php:1106
+#: includes/modal-edit-marker.php:41 includes/page-item.php:1111
 msgid "Enable/disable custom width in px"
 msgstr ""
 
@@ -413,7 +420,7 @@ msgstr ""
 msgid "Sets a marker height (auto or px)"
 msgstr ""
 
-#: includes/modal-edit-marker.php:50 includes/page-item.php:1436
+#: includes/modal-edit-marker.php:50 includes/page-item.php:1441
 msgid "Height"
 msgstr ""
 
@@ -497,24 +504,24 @@ msgstr ""
 msgid "left"
 msgstr ""
 
-#: includes/modal-edit-marker.php:132 includes/page-item.php:197
+#: includes/modal-edit-marker.php:132 includes/page-item.php:202
 msgid "Sets a background image (jpeg or png format)"
 msgstr ""
 
-#: includes/modal-edit-marker.php:133 includes/page-item.php:198
+#: includes/modal-edit-marker.php:133 includes/page-item.php:203
 msgid "Background image"
 msgstr ""
 
-#: includes/modal-edit-marker.php:136 includes/page-item.php:201
-#: includes/page-item.php:288 includes/page-item.php:438
-#: includes/page-item.php:462 includes/page-item.php:465
-#: includes/page-item.php:473 includes/page-item.php:476
-#: includes/page-item.php:489 includes/page-item.php:492
-#: includes/page-item.php:500 includes/page-item.php:503
-#: includes/page-item.php:516 includes/page-item.php:519
-#: includes/page-item.php:527 includes/page-item.php:530
-#: includes/page-item.php:644 includes/page-item.php:894
-#: includes/page-item.php:1446
+#: includes/modal-edit-marker.php:136 includes/page-item.php:206
+#: includes/page-item.php:293 includes/page-item.php:443
+#: includes/page-item.php:467 includes/page-item.php:470
+#: includes/page-item.php:478 includes/page-item.php:481
+#: includes/page-item.php:494 includes/page-item.php:497
+#: includes/page-item.php:505 includes/page-item.php:508
+#: includes/page-item.php:521 includes/page-item.php:524
+#: includes/page-item.php:532 includes/page-item.php:535
+#: includes/page-item.php:649 includes/page-item.php:899
+#: includes/page-item.php:1451
 msgid "Select an image"
 msgstr ""
 
@@ -522,7 +529,7 @@ msgstr ""
 msgid "Sets a background color"
 msgstr ""
 
-#: includes/modal-edit-marker.php:148 includes/page-item.php:192
+#: includes/modal-edit-marker.php:148 includes/page-item.php:197
 msgid "Background color"
 msgstr ""
 
@@ -530,27 +537,27 @@ msgstr ""
 msgid "How a background image will be repeated"
 msgstr ""
 
-#: includes/modal-edit-marker.php:153 includes/page-item.php:217
+#: includes/modal-edit-marker.php:153 includes/page-item.php:222
 msgid "Background repeat"
 msgstr ""
 
-#: includes/modal-edit-marker.php:162 includes/page-item.php:210
+#: includes/modal-edit-marker.php:162 includes/page-item.php:215
 msgid "Specifies a size of the background image"
 msgstr ""
 
-#: includes/modal-edit-marker.php:163 includes/page-item.php:211
+#: includes/modal-edit-marker.php:163 includes/page-item.php:216
 msgid "Background size"
 msgstr ""
 
-#: includes/modal-edit-marker.php:167 includes/page-item.php:222
+#: includes/modal-edit-marker.php:167 includes/page-item.php:227
 msgid "Sets a starting position of the background image"
 msgstr ""
 
-#: includes/modal-edit-marker.php:168 includes/page-item.php:223
+#: includes/modal-edit-marker.php:168 includes/page-item.php:228
 msgid "Background position"
 msgstr ""
 
-#: includes/modal-edit-marker.php:169 includes/page-item.php:224
+#: includes/modal-edit-marker.php:169 includes/page-item.php:229
 msgid "Example: 50% 50%"
 msgstr ""
 
@@ -666,8 +673,8 @@ msgstr ""
 msgid "bottom-left"
 msgstr ""
 
-#: includes/modal-edit-marker.php:365 includes/page-item.php:69
-#: includes/page-settings.php:39
+#: includes/modal-edit-marker.php:365 includes/page-item.php:68
+#: includes/page-settings.php:38
 msgid "Save"
 msgstr ""
 
@@ -708,8 +715,7 @@ msgid "This is the LITE version of the plugin."
 msgstr ""
 
 #: includes/page-info.php:7
-msgid ""
-"It comes with just one limitation: you can create and use only one item."
+msgid "It has only one limitation: you can only create and use 1 virtual tour."
 msgstr ""
 
 #: includes/page-info.php:8
@@ -754,1206 +760,1206 @@ msgstr ""
 msgid "Buy Pro version"
 msgstr ""
 
-#: includes/page-item.php:63 includes/page-settings.php:34
-msgid "Pro Version"
-msgstr ""
-
-#: includes/page-item.php:68
+#: includes/page-item.php:67
 msgid "The config should be saved before preview"
 msgstr ""
 
-#: includes/page-item.php:69 includes/page-settings.php:39
+#: includes/page-item.php:68 includes/page-settings.php:38
 msgid "Save config to database"
 msgstr ""
 
-#: includes/page-item.php:74 includes/page-item.php:387
-#: includes/page-item.php:851 includes/page-item.php:1021
-#: includes/page-item.php:1183 includes/page-item.php:1375
-#: includes/page-settings.php:44
+#: includes/page-item.php:73 includes/page-item.php:392
+#: includes/page-item.php:856 includes/page-item.php:1026
+#: includes/page-item.php:1188 includes/page-item.php:1380
+#: includes/page-settings.php:43
 msgid "General"
 msgstr ""
 
-#: includes/page-item.php:75
+#: includes/page-item.php:74
 msgid "Scenes"
 msgstr ""
 
-#: includes/page-item.php:76
+#: includes/page-item.php:75
 msgid "Markers"
 msgstr ""
 
-#: includes/page-item.php:77
+#: includes/page-item.php:76
 msgid "Shapes"
 msgstr ""
 
-#: includes/page-item.php:78
+#: includes/page-item.php:77
 msgid "Tracks"
 msgstr ""
 
-#: includes/page-item.php:79 includes/page-settings.php:45
+#: includes/page-item.php:78 includes/page-settings.php:44
 msgid "Custom CSS"
 msgstr ""
 
-#: includes/page-item.php:80 includes/page-settings.php:46
+#: includes/page-item.php:79 includes/page-settings.php:45
 msgid "Custom JS"
 msgstr ""
 
-#: includes/page-item.php:90
+#: includes/page-item.php:89
 msgid "Virtual tour"
 msgstr ""
 
-#: includes/page-item.php:95
+#: includes/page-item.php:94
 msgid "Enable/disable item"
 msgstr ""
 
-#: includes/page-item.php:96
+#: includes/page-item.php:95
 msgid "Enable item"
 msgstr ""
 
-#: includes/page-item.php:101
+#: includes/page-item.php:100
 msgid "Automatic scene loading after the plugin init action"
 msgstr ""
 
-#: includes/page-item.php:102
+#: includes/page-item.php:101
 msgid "Auto load"
 msgstr ""
 
-#: includes/page-item.php:107
+#: includes/page-item.php:106
 msgid "Specifies a theme for markers, tooltips & popovers"
 msgstr ""
 
-#: includes/page-item.php:108
+#: includes/page-item.php:107
 msgid "Theme"
 msgstr ""
 
-#: includes/page-item.php:110 includes/page-item.php:124
+#: includes/page-item.php:109 includes/page-item.php:123
 msgid "none"
 msgstr ""
 
-#: includes/page-item.php:116
+#: includes/page-item.php:115
 msgid "Specifies a widget for control elements"
 msgstr ""
 
-#: includes/page-item.php:117
+#: includes/page-item.php:116
 msgid "Widget"
 msgstr ""
 
-#: includes/page-item.php:132
+#: includes/page-item.php:131
 msgid "Specifies a scene transition effect"
 msgstr ""
 
-#: includes/page-item.php:133
+#: includes/page-item.php:132
 msgid "Scene transition effect"
 msgstr ""
 
-#: includes/page-item.php:136
+#: includes/page-item.php:135
 msgid "Setup scene transition effect settings"
 msgstr ""
 
-#: includes/page-item.php:140
+#: includes/page-item.php:139
 msgid "None"
 msgstr ""
 
-#: includes/page-item.php:148
+#: includes/page-item.php:147
 msgid "Specifies a scene transition duration in ms"
 msgstr ""
 
-#: includes/page-item.php:149
+#: includes/page-item.php:148
 msgid "Scene transition duration (ms)"
 msgstr ""
 
-#: includes/page-item.php:150
+#: includes/page-item.php:149
 msgid "Default: 1500"
 msgstr ""
 
-#: includes/page-item.php:156
+#: includes/page-item.php:155
 msgid "Container"
 msgstr ""
 
-#: includes/page-item.php:161
+#: includes/page-item.php:160
 msgid "The container width will be auto-calculated"
 msgstr ""
 
-#: includes/page-item.php:162
+#: includes/page-item.php:161
 msgid "Auto width"
 msgstr ""
 
-#: includes/page-item.php:167
+#: includes/page-item.php:166
 msgid "Sets the container width (can be any valid CSS units, not just pixels)"
 msgstr ""
 
-#: includes/page-item.php:168
+#: includes/page-item.php:167
 msgid "Custom width"
 msgstr ""
 
-#: includes/page-item.php:169 includes/page-item.php:181
+#: includes/page-item.php:168 includes/page-item.php:180
 msgid "Default: auto"
 msgstr ""
 
-#: includes/page-item.php:173
+#: includes/page-item.php:172
 msgid "The container height will be auto-calculated"
 msgstr ""
 
-#: includes/page-item.php:174
+#: includes/page-item.php:173
 msgid "Auto height"
 msgstr ""
 
-#: includes/page-item.php:179
+#: includes/page-item.php:178
 msgid "Sets the container height (can be any valid CSS units, not just pixels)"
 msgstr ""
 
-#: includes/page-item.php:180
+#: includes/page-item.php:179
 msgid "Custom height"
 msgstr ""
 
-#: includes/page-item.php:185
+#: includes/page-item.php:184
 msgid "Sets the inline background styles ON or OFF"
 msgstr ""
 
-#: includes/page-item.php:186
+#: includes/page-item.php:185
 msgid "Inline background styles"
 msgstr ""
 
-#: includes/page-item.php:191
+#: includes/page-item.php:190 includes/page-item.php:191
+msgid "Show/hide the white logo"
+msgstr ""
+
+#: includes/page-item.php:196
 msgid "Background color in hexadecimal format (#fff or #555555)"
 msgstr ""
 
-#: includes/page-item.php:204
+#: includes/page-item.php:209
 msgid "Select a background image"
 msgstr ""
 
-#: includes/page-item.php:216
+#: includes/page-item.php:221
 msgid ""
 "How the background image will be repeated of both horizontal or vertical"
 msgstr ""
 
-#: includes/page-item.php:228
+#: includes/page-item.php:233
 msgid "Sets additional css classes to the container"
 msgstr ""
 
-#: includes/page-item.php:229 includes/page-item.php:958
-#: includes/page-item.php:1116 includes/page-item.php:1246
+#: includes/page-item.php:234 includes/page-item.php:963
+#: includes/page-item.php:1121 includes/page-item.php:1251
 msgid "Extra CSS classes"
 msgstr ""
 
-#: includes/page-item.php:236
+#: includes/page-item.php:241
 msgid "Audio"
 msgstr ""
 
-#: includes/page-item.php:241
+#: includes/page-item.php:246
 msgid "Enable/disable audio"
 msgstr ""
 
-#: includes/page-item.php:242
+#: includes/page-item.php:247
 msgid "Enable audio"
 msgstr ""
 
-#: includes/page-item.php:247 includes/page-item.php:265
+#: includes/page-item.php:252 includes/page-item.php:270
 msgid ""
 "Enable/disable HTML5 audio. This should be used for large audio files so "
 "that you don't have to wait for the full file to be downloaded and decoded "
 "before playing"
 msgstr ""
 
-#: includes/page-item.php:248
+#: includes/page-item.php:253
 msgid "HTML5 type"
 msgstr ""
 
-#: includes/page-item.php:253
+#: includes/page-item.php:258
 msgid "Enable/disable automatically start playback when the plugin is loaded"
 msgstr ""
 
-#: includes/page-item.php:254 includes/page-item.php:687
+#: includes/page-item.php:259 includes/page-item.php:692
 msgid "Autoplay"
 msgstr ""
 
-#: includes/page-item.php:259
+#: includes/page-item.php:264
 msgid "Automatically loop the sound forever"
 msgstr ""
 
-#: includes/page-item.php:260 includes/page-item.php:702
+#: includes/page-item.php:265 includes/page-item.php:707
 msgid "Loop"
 msgstr ""
 
-#: includes/page-item.php:266
+#: includes/page-item.php:271
 msgid "Mute"
 msgstr ""
 
-#: includes/page-item.php:271 includes/page-item.php:691
+#: includes/page-item.php:276 includes/page-item.php:696
 msgid "Sets audio volume (min = 0, max = 1)"
 msgstr ""
 
-#: includes/page-item.php:272 includes/page-item.php:692
+#: includes/page-item.php:277 includes/page-item.php:697
 msgid "Volume"
 msgstr ""
 
-#: includes/page-item.php:273
+#: includes/page-item.php:278
 msgid "Default 0.6"
 msgstr ""
 
-#: includes/page-item.php:279
+#: includes/page-item.php:284
 msgid "Special"
 msgstr ""
 
-#: includes/page-item.php:284
+#: includes/page-item.php:289
 msgid ""
 "Sets a preload image for all scenes to get faster pano loading experience "
 "(jpeg or png format)"
 msgstr ""
 
-#: includes/page-item.php:285
+#: includes/page-item.php:290
 msgid "Preload image"
 msgstr ""
 
-#: includes/page-item.php:291
+#: includes/page-item.php:296
 msgid "Select a preload image"
 msgstr ""
 
-#: includes/page-item.php:299
+#: includes/page-item.php:304
 msgid ""
 "The plugin does not fire the progress event when loading the original image"
 msgstr ""
 
-#: includes/page-item.php:305
+#: includes/page-item.php:310
 msgid "Sets the time period after which start loading the original image"
 msgstr ""
 
-#: includes/page-item.php:306
+#: includes/page-item.php:311
 msgid "Preload timeout [ms]"
 msgstr ""
 
-#: includes/page-item.php:307
+#: includes/page-item.php:312
 msgid "Default: 1000"
 msgstr ""
 
-#: includes/page-item.php:311
+#: includes/page-item.php:316
 msgid "Specifies a viewer mode (normal or stereo)"
 msgstr ""
 
-#: includes/page-item.php:312
+#: includes/page-item.php:317
 msgid "Viewer mode"
 msgstr ""
 
-#: includes/page-item.php:314
+#: includes/page-item.php:319
 msgid "Normal"
 msgstr ""
 
-#: includes/page-item.php:315
+#: includes/page-item.php:320
 msgid "Stereo"
 msgstr ""
 
-#: includes/page-item.php:320
+#: includes/page-item.php:325
 msgid "Sets the last part of the virtual tour URL"
 msgstr ""
 
-#: includes/page-item.php:321
+#: includes/page-item.php:326
 msgid "URL Slug"
 msgstr ""
 
-#: includes/page-item.php:337
+#: includes/page-item.php:342
 msgid "add scene"
 msgstr ""
 
-#: includes/page-item.php:339 includes/page-item.php:799
-#: includes/page-item.php:1325 includes/page-item.php:1482
+#: includes/page-item.php:344 includes/page-item.php:804
+#: includes/page-item.php:1330 includes/page-item.php:1487
 msgid "copy"
 msgstr ""
 
-#: includes/page-item.php:340 includes/page-item.php:800
-#: includes/page-item.php:1326 includes/page-item.php:1483
+#: includes/page-item.php:345 includes/page-item.php:805
+#: includes/page-item.php:1331 includes/page-item.php:1488
 msgid "move to the start"
 msgstr ""
 
-#: includes/page-item.php:341 includes/page-item.php:801
-#: includes/page-item.php:1327 includes/page-item.php:1484
+#: includes/page-item.php:346 includes/page-item.php:806
+#: includes/page-item.php:1332 includes/page-item.php:1489
 msgid "move up"
 msgstr ""
 
-#: includes/page-item.php:342 includes/page-item.php:802
-#: includes/page-item.php:1328 includes/page-item.php:1485
+#: includes/page-item.php:347 includes/page-item.php:807
+#: includes/page-item.php:1333 includes/page-item.php:1490
 msgid "move down"
 msgstr ""
 
-#: includes/page-item.php:343 includes/page-item.php:803
-#: includes/page-item.php:1329 includes/page-item.php:1486
+#: includes/page-item.php:348 includes/page-item.php:808
+#: includes/page-item.php:1334 includes/page-item.php:1491
 msgid "move to the end"
 msgstr ""
 
-#: includes/page-item.php:347 includes/page-item.php:807
-#: includes/page-item.php:1337 includes/page-item.php:1490
+#: includes/page-item.php:352 includes/page-item.php:812
+#: includes/page-item.php:1342 includes/page-item.php:1495
 msgid "delete"
 msgstr ""
 
-#: includes/page-item.php:361 includes/page-item.php:823
-#: includes/page-item.php:1349
+#: includes/page-item.php:366 includes/page-item.php:828
+#: includes/page-item.php:1354
 msgid "show/hide"
 msgstr ""
 
-#: includes/page-item.php:376 includes/page-item.php:1566
+#: includes/page-item.php:381 includes/page-item.php:1571
 msgid "Scene"
 msgstr ""
 
-#: includes/page-item.php:381
+#: includes/page-item.php:386
 msgid "Please, select a scene to view settings"
 msgstr ""
 
-#: includes/page-item.php:392
+#: includes/page-item.php:397
 msgid "Enable/disable scene"
 msgstr ""
 
-#: includes/page-item.php:393
+#: includes/page-item.php:398
 msgid "Enable scene"
 msgstr ""
 
-#: includes/page-item.php:400
+#: includes/page-item.php:405
 msgid "Sets a scene id (allow numbers, chars & specials: \"_\",\"-\")"
 msgstr ""
 
-#: includes/page-item.php:401 includes/page-item.php:864
-#: includes/page-item.php:1388 includes/page-item.php:1544
+#: includes/page-item.php:406 includes/page-item.php:869
+#: includes/page-item.php:1393 includes/page-item.php:1549
 msgid "Id"
 msgstr ""
 
-#: includes/page-item.php:407
+#: includes/page-item.php:412
 msgid "Generate a new ID"
 msgstr ""
 
-#: includes/page-item.php:412
+#: includes/page-item.php:417
 msgid "Sets a scene type"
 msgstr ""
 
-#: includes/page-item.php:413
+#: includes/page-item.php:418
 msgid "Type"
 msgstr ""
 
-#: includes/page-item.php:420
+#: includes/page-item.php:425
 msgid "Sets a scene title"
 msgstr ""
 
-#: includes/page-item.php:424
+#: includes/page-item.php:429
 msgid "Enable/disable title"
 msgstr ""
 
-#: includes/page-item.php:434
+#: includes/page-item.php:439
 msgid "Sets a scene image (jpeg or png format)"
 msgstr ""
 
-#: includes/page-item.php:435 includes/page-item.php:891
-#: includes/page-item.php:1443
+#: includes/page-item.php:440 includes/page-item.php:896
+#: includes/page-item.php:1448
 msgid "Image"
 msgstr ""
 
-#: includes/page-item.php:441
+#: includes/page-item.php:446
 msgid "Select a scene image"
 msgstr ""
 
-#: includes/page-item.php:449
+#: includes/page-item.php:454
 msgid "Generates the scene preload image to get faster pano loading experience"
 msgstr ""
 
-#: includes/page-item.php:459
+#: includes/page-item.php:464
 msgid "Front image"
 msgstr ""
 
-#: includes/page-item.php:470
+#: includes/page-item.php:475
 msgid "Back image"
 msgstr ""
 
-#: includes/page-item.php:486
+#: includes/page-item.php:491
 msgid "Left image"
 msgstr ""
 
-#: includes/page-item.php:497
+#: includes/page-item.php:502
 msgid "Right image"
 msgstr ""
 
-#: includes/page-item.php:513
+#: includes/page-item.php:518
 msgid "Top image"
 msgstr ""
 
-#: includes/page-item.php:524
+#: includes/page-item.php:529
 msgid "Bottom image"
 msgstr ""
 
-#: includes/page-item.php:540
+#: includes/page-item.php:545
 msgid "Sets a pano id for Google Street View"
 msgstr ""
 
-#: includes/page-item.php:541
+#: includes/page-item.php:546
 msgid "Pano Id"
 msgstr ""
 
-#: includes/page-item.php:544
+#: includes/page-item.php:549
 msgid "Use the pano id"
 msgstr ""
 
-#: includes/page-item.php:547
+#: includes/page-item.php:552
 msgid "Type a pano id"
 msgstr ""
 
-#: includes/page-item.php:553
+#: includes/page-item.php:558
 msgid "Sets a latitude & longitude for Google Street View"
 msgstr ""
 
-#: includes/page-item.php:554
+#: includes/page-item.php:559
 msgid "Latitude & Longitude"
 msgstr ""
 
-#: includes/page-item.php:557
+#: includes/page-item.php:562
 msgid "Use the latitude & longitude"
 msgstr ""
 
-#: includes/page-item.php:560
+#: includes/page-item.php:565
 msgid "Type a latitude"
 msgstr ""
 
-#: includes/page-item.php:563
+#: includes/page-item.php:568
 msgid "Type a longitude"
 msgstr ""
 
-#: includes/page-item.php:570
+#: includes/page-item.php:575
 msgid "Sets the camera’s starting lookAt position"
 msgstr ""
 
-#: includes/page-item.php:571
+#: includes/page-item.php:576
 msgid "Camera lookAt"
 msgstr ""
 
-#: includes/page-item.php:574
+#: includes/page-item.php:579
 msgid "Look at"
 msgstr ""
 
-#: includes/page-item.php:577
+#: includes/page-item.php:582
 msgid "yaw"
 msgstr ""
 
-#: includes/page-item.php:580
+#: includes/page-item.php:585
 msgid "pitch"
 msgstr ""
 
-#: includes/page-item.php:583
+#: includes/page-item.php:588
 msgid "Get yaw & pitch values from the current scene"
 msgstr ""
 
-#: includes/page-item.php:589
+#: includes/page-item.php:594
 msgid "Sets the camera’s starting zoom (fov) value"
 msgstr ""
 
-#: includes/page-item.php:590
+#: includes/page-item.php:595
 msgid "Camera zoom (fov)"
 msgstr ""
 
-#: includes/page-item.php:593
+#: includes/page-item.php:598
 msgid "Zoom"
 msgstr ""
 
-#: includes/page-item.php:596 includes/page-settings.php:89
-#: includes/page-settings.php:98
+#: includes/page-item.php:601 includes/page-settings.php:88
+#: includes/page-settings.php:97
 msgid "default"
 msgstr ""
 
-#: includes/page-item.php:599
+#: includes/page-item.php:604
 msgid "Get a zoom value from the current scene camera location"
 msgstr ""
 
-#: includes/page-item.php:607
+#: includes/page-item.php:612
 msgid "Saving the camera position between scene changing"
 msgstr ""
 
-#: includes/page-item.php:608
+#: includes/page-item.php:613
 msgid "Save camera position"
 msgstr ""
 
-#: includes/page-item.php:612
+#: includes/page-item.php:617
 msgid "Shared the camera position between same type scenes"
 msgstr ""
 
-#: includes/page-item.php:613
+#: includes/page-item.php:618
 msgid "Shared camera position"
 msgstr ""
 
-#: includes/page-item.php:622 includes/page-item.php:939
-#: includes/page-item.php:1457
+#: includes/page-item.php:627 includes/page-item.php:944
+#: includes/page-item.php:1462
 msgid "Data"
 msgstr ""
 
-#: includes/page-item.php:627
+#: includes/page-item.php:632
 msgid ""
 "Adds a specific string data to the scene, we can use it in our custom code "
 "later"
 msgstr ""
 
-#: includes/page-item.php:628 includes/page-item.php:945
-#: includes/page-item.php:1463
+#: includes/page-item.php:633 includes/page-item.php:950
+#: includes/page-item.php:1468
 msgid "User data"
 msgstr ""
 
-#: includes/page-item.php:629 includes/page-item.php:946
-#: includes/page-item.php:1464
+#: includes/page-item.php:634 includes/page-item.php:951
+#: includes/page-item.php:1469
 msgid ""
 "Type any string data; it can be JSON format as an example. You can use this "
 "data inside the custom code later."
 msgstr ""
 
-#: includes/page-item.php:635 includes/page-item.php:952
-#: includes/page-item.php:1052 includes/page-item.php:1218
+#: includes/page-item.php:640 includes/page-item.php:957
+#: includes/page-item.php:1057 includes/page-item.php:1223
 msgid "Additional"
 msgstr ""
 
-#: includes/page-item.php:640
+#: includes/page-item.php:645
 msgid "Sets a scene thumb image (jpeg or png format)"
 msgstr ""
 
-#: includes/page-item.php:641
+#: includes/page-item.php:646
 msgid "Thumb image"
 msgstr ""
 
-#: includes/page-item.php:647 includes/page-item.php:897
+#: includes/page-item.php:652 includes/page-item.php:902
 msgid "Select a scene thumb image"
 msgstr ""
 
-#: includes/page-item.php:655
+#: includes/page-item.php:660
 msgid "Enable/disable compass"
 msgstr ""
 
-#: includes/page-item.php:656
+#: includes/page-item.php:661
 msgid "Compass"
 msgstr ""
 
-#: includes/page-item.php:662
+#: includes/page-item.php:667
 msgid "Sets the offset, in degrees, of the center of the panorama from North"
 msgstr ""
 
-#: includes/page-item.php:663
+#: includes/page-item.php:668
 msgid "North offset"
 msgstr ""
 
-#: includes/page-item.php:664 includes/page-item.php:748
-#: includes/page-item.php:753
+#: includes/page-item.php:669 includes/page-item.php:753
+#: includes/page-item.php:758
 msgid "Default 0"
 msgstr ""
 
-#: includes/page-item.php:671
+#: includes/page-item.php:676
 msgid "Sets an audio stream to a scene"
 msgstr ""
 
-#: includes/page-item.php:672 includes/page-item.php:1554
+#: includes/page-item.php:677 includes/page-item.php:1559
 msgid "Audio file"
 msgstr ""
 
-#: includes/page-item.php:675 includes/page-item.php:678
-#: includes/page-item.php:1557 includes/page-item.php:1560
+#: includes/page-item.php:680 includes/page-item.php:683
+#: includes/page-item.php:1562 includes/page-item.php:1565
 msgid "Select audio"
 msgstr ""
 
-#: includes/page-item.php:686
+#: includes/page-item.php:691
 msgid "Autoplay audio after loading a scene"
 msgstr ""
 
-#: includes/page-item.php:693 includes/page-item.php:743
+#: includes/page-item.php:698 includes/page-item.php:748
 msgid "Default 0.5"
 msgstr ""
 
-#: includes/page-item.php:701
+#: includes/page-item.php:706
 msgid "Loop audio"
 msgstr ""
 
-#: includes/page-item.php:706
+#: includes/page-item.php:711
 msgid "Stop previous playing audio"
 msgstr ""
 
-#: includes/page-item.php:707
+#: includes/page-item.php:712
 msgid "Stop previous"
 msgstr ""
 
-#: includes/page-item.php:717 includes/page-item.php:965
-#: includes/page-item.php:1124 includes/page-item.php:1254
+#: includes/page-item.php:722 includes/page-item.php:970
+#: includes/page-item.php:1129 includes/page-item.php:1259
 msgid "Actions"
 msgstr ""
 
-#: includes/page-item.php:724
+#: includes/page-item.php:729
 msgid "Enable/disable auto rotate"
 msgstr ""
 
-#: includes/page-item.php:725
+#: includes/page-item.php:730
 msgid "Auto rotate"
 msgstr ""
 
-#: includes/page-item.php:731
+#: includes/page-item.php:736
 msgid ""
 "Sets the delay, in milliseconds, to start automatically rotating after user "
 "activity ceases"
 msgstr ""
 
-#: includes/page-item.php:732
+#: includes/page-item.php:737
 msgid "Inactivity delay"
 msgstr ""
 
-#: includes/page-item.php:733
+#: includes/page-item.php:738
 msgid "Default 3000"
 msgstr ""
 
-#: includes/page-item.php:741
+#: includes/page-item.php:746
 msgid "Sets auto rotate speed along X axis"
 msgstr ""
 
-#: includes/page-item.php:742
+#: includes/page-item.php:747
 msgid "Speed X"
 msgstr ""
 
-#: includes/page-item.php:746
+#: includes/page-item.php:751
 msgid "Sets auto rotate speed along Y axis"
 msgstr ""
 
-#: includes/page-item.php:747
+#: includes/page-item.php:752
 msgid "Speed Y"
 msgstr ""
 
-#: includes/page-item.php:751
+#: includes/page-item.php:756
 msgid "Sets auto rotate speed along Z axis"
 msgstr ""
 
-#: includes/page-item.php:752
+#: includes/page-item.php:757
 msgid "Speed Z"
 msgstr ""
 
-#: includes/page-item.php:761
+#: includes/page-item.php:766
 msgid "Enable/disable zoom"
 msgstr ""
 
-#: includes/page-item.php:762
+#: includes/page-item.php:767
 msgid "No zoom"
 msgstr ""
 
-#: includes/page-item.php:766
+#: includes/page-item.php:771
 msgid "Enable/disable rotate"
 msgstr ""
 
-#: includes/page-item.php:767
+#: includes/page-item.php:772
 msgid "No rotate"
 msgstr ""
 
-#: includes/page-item.php:771
+#: includes/page-item.php:776
 msgid "Enable/disable keyboard navigation"
 msgstr ""
 
-#: includes/page-item.php:772
+#: includes/page-item.php:777
 msgid "No keys"
 msgstr ""
 
-#: includes/page-item.php:779
+#: includes/page-item.php:784
 msgid "Enable/disable gyroscope"
 msgstr ""
 
-#: includes/page-item.php:780
+#: includes/page-item.php:785
 msgid "No gyroscope"
 msgstr ""
 
-#: includes/page-item.php:797
+#: includes/page-item.php:802
 msgid "add marker"
 msgstr ""
 
-#: includes/page-item.php:816 includes/page-item.php:1346
+#: includes/page-item.php:821 includes/page-item.php:1351
 msgid "look at"
 msgstr ""
 
-#: includes/page-item.php:819
+#: includes/page-item.php:824
 msgid "tooltip enabled"
 msgstr ""
 
-#: includes/page-item.php:820
+#: includes/page-item.php:825
 msgid "popover enabled"
 msgstr ""
 
-#: includes/page-item.php:821 includes/page-item.php:1504
+#: includes/page-item.php:826 includes/page-item.php:1509
 msgid "linked to a scene"
 msgstr ""
 
-#: includes/page-item.php:822 includes/page-item.php:916
+#: includes/page-item.php:827 includes/page-item.php:921
 msgid "edit custom style"
 msgstr ""
 
-#: includes/page-item.php:838
+#: includes/page-item.php:843
 msgid "Marker"
 msgstr ""
 
-#: includes/page-item.php:839
+#: includes/page-item.php:844
 msgid "Tooltip"
 msgstr ""
 
-#: includes/page-item.php:840
+#: includes/page-item.php:845
 msgid "Popover"
 msgstr ""
 
-#: includes/page-item.php:845 includes/page-item.php:1015
-#: includes/page-item.php:1177
+#: includes/page-item.php:850 includes/page-item.php:1020
+#: includes/page-item.php:1182
 msgid "Please, select a marker to view settings"
 msgstr ""
 
-#: includes/page-item.php:858
+#: includes/page-item.php:863
 msgid "Sets the marker title"
 msgstr ""
 
-#: includes/page-item.php:863
+#: includes/page-item.php:868
 msgid "Sets the marker ID"
 msgstr ""
 
-#: includes/page-item.php:873
+#: includes/page-item.php:878
 msgid "Sets the marker’s yaw position in degrees"
 msgstr ""
 
-#: includes/page-item.php:874
+#: includes/page-item.php:879
 msgid "Sets the marker’s \"x\" position in px"
 msgstr ""
 
-#: includes/page-item.php:875
+#: includes/page-item.php:880
 msgid "Yaw"
 msgstr ""
 
-#: includes/page-item.php:876 includes/page-item.php:1397
+#: includes/page-item.php:881 includes/page-item.php:1402
 msgid "X"
 msgstr ""
 
-#: includes/page-item.php:880
+#: includes/page-item.php:885
 msgid "Sets the marker’s pitch position in degrees"
 msgstr ""
 
-#: includes/page-item.php:881
+#: includes/page-item.php:886
 msgid "Sets the marker’s \"y\" position in px"
 msgstr ""
 
-#: includes/page-item.php:882
+#: includes/page-item.php:887
 msgid "Pitch"
 msgstr ""
 
-#: includes/page-item.php:883 includes/page-item.php:1401
+#: includes/page-item.php:888 includes/page-item.php:1406
 msgid "Y"
 msgstr ""
 
-#: includes/page-item.php:890
+#: includes/page-item.php:895
 msgid "Sets a marker image (jpeg or png format)"
 msgstr ""
 
-#: includes/page-item.php:905
+#: includes/page-item.php:910
 msgid "Custom style"
 msgstr ""
 
-#: includes/page-item.php:910
+#: includes/page-item.php:915
 msgid "Enable/disable custom style for the selected marker"
 msgstr ""
 
-#: includes/page-item.php:911
+#: includes/page-item.php:916
 msgid "Enable custom style"
 msgstr ""
 
-#: includes/page-item.php:944
+#: includes/page-item.php:949
 msgid ""
 "Adds a specific string data to the marker, if we want to use it in custom "
 "code later"
 msgstr ""
 
-#: includes/page-item.php:957
+#: includes/page-item.php:962
 msgid "Sets additional CSS classes to the marker"
 msgstr ""
 
-#: includes/page-item.php:970
+#: includes/page-item.php:975
 msgid "Adds a specific url to the marker"
 msgstr ""
 
-#: includes/page-item.php:971
+#: includes/page-item.php:976
 msgid "Go to an URL"
 msgstr ""
 
-#: includes/page-item.php:973
+#: includes/page-item.php:978
 msgid "URL"
 msgstr ""
 
-#: includes/page-item.php:980
+#: includes/page-item.php:985
 msgid "Open url in a new window"
 msgstr ""
 
-#: includes/page-item.php:986
+#: includes/page-item.php:991
 msgid "Specifies the scene ID to be switched to"
 msgstr ""
 
-#: includes/page-item.php:987
+#: includes/page-item.php:992
 msgid "Go to a scene"
 msgstr ""
 
-#: includes/page-item.php:997
+#: includes/page-item.php:1002
 msgid "Auto focus on the marker after the click event"
 msgstr ""
 
-#: includes/page-item.php:998
+#: includes/page-item.php:1003
 msgid "Auto focus"
 msgstr ""
 
-#: includes/page-item.php:1002
+#: includes/page-item.php:1007
 msgid "Sets duration for auto focus action"
 msgstr ""
 
-#: includes/page-item.php:1003 includes/page-item.php:1166
-#: includes/page-item.php:1305
+#: includes/page-item.php:1008 includes/page-item.php:1171
+#: includes/page-item.php:1310
 msgid "Duration [ms]"
 msgstr ""
 
-#: includes/page-item.php:1004
+#: includes/page-item.php:1009
 msgid "Default: 700"
 msgstr ""
 
-#: includes/page-item.php:1027
+#: includes/page-item.php:1032
 msgid "Enable/disable tooltip for the selected marker"
 msgstr ""
 
-#: includes/page-item.php:1028
+#: includes/page-item.php:1033
 msgid "Enable tooltip"
 msgstr ""
 
-#: includes/page-item.php:1060
+#: includes/page-item.php:1065
 msgid "Specifies a tooltip event trigger"
 msgstr ""
 
-#: includes/page-item.php:1061 includes/page-item.php:1240
+#: includes/page-item.php:1066 includes/page-item.php:1245
 msgid "Trigger"
 msgstr ""
 
-#: includes/page-item.php:1065
+#: includes/page-item.php:1070
 msgid "Specifies a tooltip placement"
 msgstr ""
 
-#: includes/page-item.php:1066
+#: includes/page-item.php:1071
 msgid "Placement"
 msgstr ""
 
-#: includes/page-item.php:1073
+#: includes/page-item.php:1078
 msgid "Sets tooltip offset"
 msgstr ""
 
-#: includes/page-item.php:1076
+#: includes/page-item.php:1081
 msgid "Offset X [px]"
 msgstr ""
 
-#: includes/page-item.php:1080
+#: includes/page-item.php:1085
 msgid "Offset Y [px]"
 msgstr ""
 
-#: includes/page-item.php:1089
+#: includes/page-item.php:1094
 msgid ""
 "Enable/disable tooltip following the cursor as you hover over the marker"
 msgstr ""
 
-#: includes/page-item.php:1090
+#: includes/page-item.php:1095
 msgid "Follow the cursor"
 msgstr ""
 
-#: includes/page-item.php:1094
+#: includes/page-item.php:1099
 msgid "The tooltip won't hide when you hover over or click on them"
 msgstr ""
 
-#: includes/page-item.php:1095
+#: includes/page-item.php:1100
 msgid "Interactive"
 msgstr ""
 
-#: includes/page-item.php:1102
+#: includes/page-item.php:1107
 msgid "Sets a tooltip width (auto from css or px)"
 msgstr ""
 
-#: includes/page-item.php:1115
+#: includes/page-item.php:1120
 msgid "Sets additional CSS classes to the tooltip"
 msgstr ""
 
-#: includes/page-item.php:1130
+#: includes/page-item.php:1135
 msgid "The tooltip will be shown immediately when the scene is ready"
 msgstr ""
 
-#: includes/page-item.php:1131 includes/page-item.php:1263
+#: includes/page-item.php:1136 includes/page-item.php:1268
 msgid "Show when the scene is ready"
 msgstr ""
 
-#: includes/page-item.php:1138
+#: includes/page-item.php:1143
 msgid ""
 "Select a show animation effect for the tooltip from the list or write your "
 "own"
 msgstr ""
 
-#: includes/page-item.php:1139 includes/page-item.php:1278
+#: includes/page-item.php:1144 includes/page-item.php:1283
 msgid "Show animation"
 msgstr ""
 
-#: includes/page-item.php:1145 includes/page-item.php:1157
-#: includes/page-item.php:1284 includes/page-item.php:1296
+#: includes/page-item.php:1150 includes/page-item.php:1162
+#: includes/page-item.php:1289 includes/page-item.php:1301
 msgid "Select an effect"
 msgstr ""
 
-#: includes/page-item.php:1150
+#: includes/page-item.php:1155
 msgid ""
 "Select a hide animation effect for the tooltip from the list or write your "
 "own"
 msgstr ""
 
-#: includes/page-item.php:1151 includes/page-item.php:1290
+#: includes/page-item.php:1156 includes/page-item.php:1295
 msgid "Hide animation"
 msgstr ""
 
-#: includes/page-item.php:1165 includes/page-item.php:1304
+#: includes/page-item.php:1170 includes/page-item.php:1309
 msgid "Sets animation duration for show and hide effects"
 msgstr ""
 
-#: includes/page-item.php:1167 includes/page-item.php:1306
+#: includes/page-item.php:1172 includes/page-item.php:1311
 msgid "Default: 500"
 msgstr ""
 
-#: includes/page-item.php:1189
+#: includes/page-item.php:1194
 msgid "Enable/disable popover for the selected marker"
 msgstr ""
 
-#: includes/page-item.php:1190
+#: includes/page-item.php:1195
 msgid "Enable popover"
 msgstr ""
 
-#: includes/page-item.php:1226
+#: includes/page-item.php:1231
 msgid "Specifies a popover desktop type"
 msgstr ""
 
-#: includes/page-item.php:1227
+#: includes/page-item.php:1232
 msgid "Desktop type"
 msgstr ""
 
-#: includes/page-item.php:1231
+#: includes/page-item.php:1236
 msgid "Specifies a popover mobile type"
 msgstr ""
 
-#: includes/page-item.php:1232
+#: includes/page-item.php:1237
 msgid "Mobile type"
 msgstr ""
 
-#: includes/page-item.php:1239
+#: includes/page-item.php:1244
 msgid "Specifies a popover event trigger"
 msgstr ""
 
-#: includes/page-item.php:1245
+#: includes/page-item.php:1250
 msgid "Sets additional CSS classes to the popover"
 msgstr ""
 
-#: includes/page-item.php:1262
+#: includes/page-item.php:1267
 msgid "The popover will be shown immediately when the scene is ready"
 msgstr ""
 
-#: includes/page-item.php:1267
+#: includes/page-item.php:1272
 msgid "The popover will be closed after the outside click event"
 msgstr ""
 
-#: includes/page-item.php:1268
+#: includes/page-item.php:1273
 msgid "Close outside"
 msgstr ""
 
-#: includes/page-item.php:1277
+#: includes/page-item.php:1282
 msgid ""
 "Select a show animation effect for the popover from the list or write your "
 "own"
 msgstr ""
 
-#: includes/page-item.php:1289
+#: includes/page-item.php:1294
 msgid ""
 "Select a hide animation effect for the popover from the list or write your "
 "own"
 msgstr ""
 
-#: includes/page-item.php:1323
+#: includes/page-item.php:1328
 msgid "add shape"
 msgstr ""
 
-#: includes/page-item.php:1364
+#: includes/page-item.php:1369
 msgid "Shape"
 msgstr ""
 
-#: includes/page-item.php:1369
+#: includes/page-item.php:1374
 msgid "Please, select a shape to view settings"
 msgstr ""
 
-#: includes/page-item.php:1382
+#: includes/page-item.php:1387
 msgid "Sets a shape title"
 msgstr ""
 
-#: includes/page-item.php:1387
+#: includes/page-item.php:1392
 msgid "The shape id"
 msgstr ""
 
-#: includes/page-item.php:1394
+#: includes/page-item.php:1399
 msgid "Sets a shape position in 3d space"
 msgstr ""
 
-#: includes/page-item.php:1405
+#: includes/page-item.php:1410
 msgid "Z"
 msgstr ""
 
-#: includes/page-item.php:1411
+#: includes/page-item.php:1416
 msgid "Sets a shape rotation in 3d space"
 msgstr ""
 
-#: includes/page-item.php:1414
+#: includes/page-item.php:1419
 msgid "X (deg)"
 msgstr ""
 
-#: includes/page-item.php:1418
+#: includes/page-item.php:1423
 msgid "Y (deg)"
 msgstr ""
 
-#: includes/page-item.php:1422
+#: includes/page-item.php:1427
 msgid "Z (deg)"
 msgstr ""
 
-#: includes/page-item.php:1430
+#: includes/page-item.php:1435
 msgid "Sets a shape width"
 msgstr ""
 
-#: includes/page-item.php:1435
+#: includes/page-item.php:1440
 msgid "Sets a shape height"
 msgstr ""
 
-#: includes/page-item.php:1442
+#: includes/page-item.php:1447
 msgid "Sets a shape image (jpeg or png format)"
 msgstr ""
 
-#: includes/page-item.php:1449
+#: includes/page-item.php:1454
 msgid "Select a shape image"
 msgstr ""
 
-#: includes/page-item.php:1462
+#: includes/page-item.php:1467
 msgid ""
 "Adds a specific string data to the shape, if we want to use it in custom "
 "code later"
 msgstr ""
 
-#: includes/page-item.php:1480
+#: includes/page-item.php:1485
 msgid "add track"
 msgstr ""
 
-#: includes/page-item.php:1505
+#: includes/page-item.php:1510
 msgid "enable/disable"
 msgstr ""
 
-#: includes/page-item.php:1520
+#: includes/page-item.php:1525
 msgid "Audio track"
 msgstr ""
 
-#: includes/page-item.php:1525
+#: includes/page-item.php:1530
 msgid "Please, select a track to view settings"
 msgstr ""
 
-#: includes/page-item.php:1530
+#: includes/page-item.php:1535
 msgid "Enable/disable track"
 msgstr ""
 
-#: includes/page-item.php:1531
+#: includes/page-item.php:1536
 msgid "Enable track"
 msgstr ""
 
-#: includes/page-item.php:1538
+#: includes/page-item.php:1543
 msgid "Sets the track title"
 msgstr ""
 
-#: includes/page-item.php:1543
+#: includes/page-item.php:1548
 msgid "Sets the track ID"
 msgstr ""
 
-#: includes/page-item.php:1553
+#: includes/page-item.php:1558
 msgid "Sets an audio stream"
 msgstr ""
 
-#: includes/page-item.php:1565
+#: includes/page-item.php:1570
 msgid "Specifies the scene ID to be connected with the audio track"
 msgstr ""
 
-#: includes/page-item.php:1578
+#: includes/page-item.php:1583
 msgid "Autoplay the audio track after loading a scene"
 msgstr ""
 
-#: includes/page-item.php:1586
+#: includes/page-item.php:1591
 msgid "Automatically loop the audio track forever in a scene"
 msgstr ""
 
-#: includes/page-item.php:1602 includes/page-settings.php:111
+#: includes/page-item.php:1607 includes/page-settings.php:110
 msgid "Enable/disable custom styles"
 msgstr ""
 
-#: includes/page-item.php:1608 includes/page-settings.php:117
+#: includes/page-item.php:1613 includes/page-settings.php:116
 msgid "Enable styles"
 msgstr ""
 
-#: includes/page-item.php:1624 includes/page-settings.php:133
+#: includes/page-item.php:1629 includes/page-settings.php:132
 msgid "Enable/disable custom javascript code"
 msgstr ""
 
-#: includes/page-item.php:1630 includes/page-settings.php:139
+#: includes/page-item.php:1635 includes/page-settings.php:138
 msgid "Enable javascript code"
 msgstr ""
 
-#: includes/page-item.php:1645
+#: includes/page-item.php:1650
 msgid ""
 "Use a shortcode like the one below, copy and paste it into a post or page."
 msgstr ""
 
-#: includes/page-item.php:1649
+#: includes/page-item.php:1654
 msgid "Standard shortcode"
 msgstr ""
 
-#: includes/page-item.php:1655 includes/page-item.php:1709
-#: includes/page-item.php:1721
+#: includes/page-item.php:1660 includes/page-item.php:1714
+#: includes/page-item.php:1726
 msgid "Copy to clipboard"
 msgstr ""
 
-#: includes/page-item.php:1660
+#: includes/page-item.php:1665
 msgid ""
 "Next to that you can also add a few optional arguments to your shortcode:"
 msgstr ""
 
-#: includes/page-item.php:1664
+#: includes/page-item.php:1669
 msgid "Variable"
 msgstr ""
 
-#: includes/page-item.php:1665
+#: includes/page-item.php:1670
 msgid "Value"
 msgstr ""
 
-#: includes/page-item.php:1669
+#: includes/page-item.php:1674
 msgid "virtual tour ID"
 msgstr ""
 
-#: includes/page-item.php:1673
+#: includes/page-item.php:1678
 msgid "virtual tour slug identifier"
 msgstr ""
 
-#: includes/page-item.php:1677
+#: includes/page-item.php:1682
 msgid "start scene ID"
 msgstr ""
 
-#: includes/page-item.php:1681
+#: includes/page-item.php:1686
 msgid "custom CSS class"
 msgstr ""
 
-#: includes/page-item.php:1685
+#: includes/page-item.php:1690
 msgid "container width, can be specified in length values, like px, cm, etc"
 msgstr ""
 
-#: includes/page-item.php:1689
+#: includes/page-item.php:1694
 msgid "container height, can be specified in length values, like px, cm, etc"
 msgstr ""
 
-#: includes/page-item.php:1693
+#: includes/page-item.php:1698
 msgid "string custom data is applied to the container"
 msgstr ""
 
-#: includes/page-item.php:1699
+#: includes/page-item.php:1704
 msgid ""
 "You can add a virtual tour to a website or blog by embedding it. Copy the "
 "code below and paste it into your blog or website."
 msgstr ""
 
-#: includes/page-item.php:1703
+#: includes/page-item.php:1708
 msgid "Embed code with ID"
 msgstr ""
 
-#: includes/page-item.php:1715
+#: includes/page-item.php:1720
 msgid "Embed code with URL slug"
 msgstr ""
 
@@ -1973,186 +1979,183 @@ msgstr ""
 msgid "Search Items"
 msgstr ""
 
-#: includes/page-settings.php:14 includes/plugin.php:712
+#: includes/page-settings.php:14 includes/plugin.php:713
 msgid "Settings"
 msgstr ""
 
-#: includes/page-settings.php:54
+#: includes/page-settings.php:53
 msgid "Select the roles which should be able to access the plugin capabilities"
 msgstr ""
 
-#: includes/page-settings.php:59
+#: includes/page-settings.php:58
 msgid "private"
 msgstr ""
 
-#: includes/page-settings.php:60
+#: includes/page-settings.php:59
 msgid "group"
 msgstr ""
 
-#: includes/page-settings.php:61
+#: includes/page-settings.php:60
 msgid "all"
 msgstr ""
 
-#: includes/page-settings.php:66
+#: includes/page-settings.php:65
 msgid "Preview & iframe page settings"
 msgstr ""
 
-#: includes/page-settings.php:70
+#: includes/page-settings.php:69
 msgid "Enable/disable the wp_head call inside the preview page"
 msgstr ""
 
-#: includes/page-settings.php:71
+#: includes/page-settings.php:70
 msgid "Enable wp_head()"
 msgstr ""
 
-#: includes/page-settings.php:76
+#: includes/page-settings.php:75
 msgid "Enable/disable the wp_footer call inside the preview page"
 msgstr ""
 
-#: includes/page-settings.php:77
+#: includes/page-settings.php:76
 msgid "Enable wp_footer()"
 msgstr ""
 
-#: includes/page-settings.php:82
+#: includes/page-settings.php:81
 msgid "Editor settings"
 msgstr ""
 
-#: includes/page-settings.php:86
+#: includes/page-settings.php:85
 msgid "Choose a default theme for your custom javascript editor"
 msgstr ""
 
-#: includes/page-settings.php:87
+#: includes/page-settings.php:86
 msgid "JavaScript editor theme"
 msgstr ""
 
-#: includes/page-settings.php:95
+#: includes/page-settings.php:94
 msgid "Choose a default theme for your custom css editor"
 msgstr ""
 
-#: includes/page-settings.php:96
+#: includes/page-settings.php:95
 msgid "CSS editor theme"
 msgstr ""
 
-#: includes/plugin.php:434
+#: includes/plugin.php:428
 msgid "Error: invalid ipanorama identifier attribute"
 msgstr ""
 
-#: includes/plugin.php:579
+#: includes/plugin.php:576
 msgid "Error: the ipanorama item can’t be found"
 msgstr ""
 
-#: includes/plugin.php:659 includes/plugin.php:1229 includes/plugin.php:1267
-#: includes/plugin.php:1345 includes/plugin.php:2233
+#: includes/plugin.php:660 includes/plugin.php:1264 includes/plugin.php:1302
+#: includes/plugin.php:1379 includes/plugin.php:2274
 msgid ""
 "Server error. Can't get access to the WordPress file system. The plugin "
 "can't work properly, please check the permissions."
 msgstr ""
 
-#: includes/plugin.php:670
+#: includes/plugin.php:671
 msgid ""
 "The plugin can't create the \"ipanorama\" directory. It's used to store the "
 "items data."
 msgstr ""
 
-#: includes/plugin.php:671 includes/plugin.php:679
+#: includes/plugin.php:672 includes/plugin.php:680
 msgid ""
 "Please check the permissions and owner of the WordPress upload directory."
 msgstr ""
 
-#: includes/plugin.php:678
+#: includes/plugin.php:679
 msgid ""
 "The \"ipanorama\" directory is not writable, therefore the item config files "
 "cannot be saved."
 msgstr ""
 
-#. Plugin Name of the plugin/theme
-#: includes/plugin.php:709 includes/plugin.php:710 includes/plugin.php:711
-#: includes/plugin.php:712 includes/plugin.php:714
+#: includes/plugin.php:710 includes/plugin.php:711 includes/plugin.php:712
+#: includes/plugin.php:713 includes/plugin.php:715
 msgid "iPanorama 360"
 msgstr ""
 
-#: includes/plugin.php:710
+#: includes/plugin.php:711
 msgid "All Items"
 msgstr ""
 
-#: includes/plugin.php:711
+#: includes/plugin.php:712
 msgid "Add New"
 msgstr ""
 
-#: includes/plugin.php:714
+#: includes/plugin.php:715
 msgid "Upgrade to Pro"
 msgstr ""
 
-#: includes/plugin.php:863 includes/plugin.php:907 includes/plugin.php:980
+#: includes/plugin.php:871 includes/plugin.php:932 includes/plugin.php:1006
 msgid "Available only in the pro version"
 msgstr ""
 
-#: includes/plugin.php:867 includes/plugin.php:915 includes/plugin.php:983
+#: includes/plugin.php:875 includes/plugin.php:940 includes/plugin.php:1009
 msgid "Server response error"
 msgstr ""
 
-#: includes/plugin.php:908
+#: includes/plugin.php:933
 msgid "Edit your text here"
 msgstr ""
 
-#: includes/plugin.php:909
+#: includes/plugin.php:934
 msgid "Custom js code error"
 msgstr ""
 
-#: includes/plugin.php:1041
+#: includes/plugin.php:1070
 msgid "Item updated"
 msgstr ""
 
-#: includes/plugin.php:1044 includes/plugin.php:1123
+#: includes/plugin.php:1073 includes/plugin.php:1157
 msgid "The operation failed, can't update the item"
 msgstr ""
 
-#: includes/plugin.php:1048 includes/plugin.php:1277 includes/plugin.php:2191
-#: includes/plugin.php:2197
+#: includes/plugin.php:1077 includes/plugin.php:1312 includes/plugin.php:2231
+#: includes/plugin.php:2237
 msgid "The operation failed"
 msgstr ""
 
-#: includes/plugin.php:1081
-msgid ""
-"The operation failed, you can create only one item. To create more, buy the "
-"pro version."
-msgstr ""
-
-#: includes/plugin.php:1119
+#: includes/plugin.php:1153
 msgid "The item was successfully updated"
 msgstr ""
 
-#: includes/plugin.php:1144
+#: includes/plugin.php:1179
 msgid "The item was successfully created"
 msgstr ""
 
-#: includes/plugin.php:1147
+#: includes/plugin.php:1182
 msgid "The operation failed, can't create the item"
 msgstr ""
 
-#: includes/plugin.php:1233 includes/plugin.php:1271 includes/plugin.php:1349
-#: includes/plugin.php:2237
+#: includes/plugin.php:1268 includes/plugin.php:1306 includes/plugin.php:1383
+#: includes/plugin.php:2278
 msgid "Server error. The upload directory is not writable."
 msgstr ""
 
-#: includes/plugin.php:1264
+#: includes/plugin.php:1299
 msgid "The preload images were successfully created"
 msgstr ""
 
-#: includes/plugin.php:1320
+#: includes/plugin.php:1354
 msgid "The settings were successfully updated"
 msgstr ""
 
-#: includes/plugin.php:1323
+#: includes/plugin.php:1357
 msgid "The operation failed, can't update settings"
 msgstr ""
 
-#: includes/plugin.php:2215
+#: includes/plugin.php:2255
 msgid "The operation failed, can't delete data"
 msgstr ""
 
-#: includes/plugin.php:2246
+#: includes/plugin.php:2289
 msgid "All data was successfully deleted"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "iPanorama 360 - Advanced Virtual Tour Builder"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

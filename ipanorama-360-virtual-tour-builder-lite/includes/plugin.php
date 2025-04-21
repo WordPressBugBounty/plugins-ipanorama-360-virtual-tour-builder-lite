@@ -897,9 +897,9 @@ class iPanorama_App {
                 // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
                 $count = $wpdb->get_var("SELECT COUNT(*) FROM {$table}");
 
-                if ( $count >= 3 ) {
+                if ( $count >= 1 ) {
                     echo '<div class="notice notice-error is-dismissible">';
-                    echo '<p>iPanorama 360: ' . esc_html__('You can create only 3 virtual tours. If you need more, upgrade to the pro version.', 'ipanorama') . '</p>';
+                    echo '<p>iPanorama 360: ' . esc_html__('You can create only 1 virtual tour. If you need more, upgrade to the pro version.', 'ipanorama') . '</p>';
                     echo '</div>';
                     return;
                 }
@@ -1101,10 +1101,10 @@ class iPanorama_App {
                 // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared, WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching
                 $count = $wpdb->get_var("SELECT COUNT(*) FROM {$table}");
 
-                if ( $count >= 3 ) {
+                if ( $count >= 1 ) {
                     $flag = false;
                     $error = true;
-                    $data['msg'] = esc_html__('You can create only 3 virtual tours. If you need more, upgrade to the pro version.', 'ipanorama');
+                    $data['msg'] = esc_html__('You can create only 1 virtual tour. If you need more, upgrade to the pro version.', 'ipanorama');
                 }
             }
 			

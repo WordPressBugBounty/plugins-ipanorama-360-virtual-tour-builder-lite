@@ -2,9 +2,9 @@
 Contributors: Avirtum
 Tags: virtual tour, panorama, panorama viewer, virtual tour, 360 panorama
 Requires at least: 4.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 7.4
-Stable tag: 1.9.0
+Stable tag: 1.9.1
 License: GPLv3
 
 Let's create virtual tours for your site that empowers your visitors and clients!!! Build a live tour in just a few steps.
@@ -138,6 +138,9 @@ The lite version has only one limitation. You can create and use only one item. 
 
 
 == Changelog ==
+
+= 1.9.1 =
+* Fix: resolved 403 errors occurring when strict HTTP standards enforcement is enabled
 
 = 1.9.0 =
 * Mod: lazy load mode – panorama is loaded only when visible in the web view screen
