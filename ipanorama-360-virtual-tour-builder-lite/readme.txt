@@ -2,14 +2,22 @@
 Contributors: Avirtum
 Tags: virtual tour, panorama, panorama viewer, virtual tour, 360 panorama
 Requires at least: 4.0
-Tested up to: 6.8
+Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.9.1
+Stable tag: 1.9.2
 License: GPLv3
 
 Let's create virtual tours for your site that empowers your visitors and clients!!! Build a live tour in just a few steps.
 
 == Description ==
+
+### 📢 Note from the Developer
+To our amazing **iPanorama 360** community! We are proud to introduce **[HappyVR](https://wordpress.org/plugins/happyvr/)** - our next-generation virtual tour builder. 
+
+Built from the ground up on modern web standards, HappyVR solves layout and theme conflicts once and for all. It features complete CSS/JS isolation (Shadow DOM) to protect your site’s layout, a lightning-fast React-based live editor, and advanced Tile Generation so that massive gigapixel panoramas load instantly on mobile devices.
+ 
+🎁 **[Check out HappyVR and download it for FREE!](https://wordpress.org/plugins/happyvr/)**
+
 
 iPanorama 360 is the WordPress plugin out there that lets you create excellent virtual tours for clients from directly inside the WordPress admin in seconds. The plugin supports markers for providing information about any part of the scene or for navigation to other rooms/areas. With a well-builded tooltip system, you can enrich a scene with text, images, video, and other online media resources. Use this plugin to create interactive & virtual tours, maps, presentations.
 
@@ -138,6 +146,9 @@ The lite version has only one limitation. You can create and use only one item. 
 
 
 == Changelog ==
+
+= 1.9.2 =
+* Mod: tested up to WordPress 7.1
 
 = 1.9.1 =
 * Fix: resolved 403 errors occurring when strict HTTP standards enforcement is enabled
