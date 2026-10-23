@@ -764,7 +764,7 @@ if (!class_exists('iPanorama_App')) :
       echo '<p class="title">' . esc_html__('Meet HappyVR - the modern successor to iPanorama 360', 'ipanorama') . '</p>';
       echo '<p>' . esc_html__('iPanorama stays fully functional and keeps receiving security & compatibility updates. All new feature development now lives in HappyVR, the next-generation virtual tour builder from the same author: a React-based live editor, Shadow DOM isolation so tours never clash with your theme, native tile generation for gigapixel panoramas, immersive audio, and page-builder integrations.', 'ipanorama') . '</p>';
       echo '<p>' . esc_html__('As a thank-you to the iPanorama community, use the code below for 20% off any HappyVR Pro license.', 'ipanorama') . '</p>';
-      echo '<p class="coupon"><code>IPANO20</code> - ' . esc_html__('Valid through December 31, 2026 · any HappyVR Pro plan', 'ipanorama') . '</p>';
+      echo '<p class="coupon"><code>IPANO20</code> - <b>20% OFF Coupon</b> - ' . esc_html__('Valid through December 31, 2026 · any HappyVR Pro plan', 'ipanorama') . '</p>';
       echo '<div class="buttons">';
       echo '<div>';
       echo '<a class="button button-primary" href="' . esc_url($get_url) . '" target="_blank" rel="noopener noreferrer">' . esc_html__('Get HappyVR PRO 20% Off', 'ipanorama') . '</a> ';
